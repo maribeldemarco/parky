@@ -16,13 +16,12 @@ export class Tab1Page {
   ) { }
   
   async loginUser() {
-    this.router.navigate(['/tabs'])
-    /*this.auth.logIn(this.email, this.password).then((userCredential) => {
+    this.auth.logIn(this.email, this.password).then((userCredential) => {
       console.log(userCredential);
-      this.router.navigate(['/tab2'])
+      this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
       alert('Email y/o contraseña incorrecta.');
-    });*/
+    });
   }
 }
