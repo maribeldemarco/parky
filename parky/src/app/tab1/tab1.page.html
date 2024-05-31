@@ -20,9 +20,9 @@
 </div>
 
 <div class="contenedor">
-      <input  class="input" type="email" placeholder="Correo electrónico">
+      <input [(ngModel)]="email"  class="input" type="email" placeholder="Correo electrónico">
 
-      <input class="input"  placeholder="Contraseña">
+      <input [(ngModel)]="password" class="input"  placeholder="Contraseña">
 
       <ion-checkbox label-placement="end" class="fuente2">Recordar mis datos</ion-checkbox>
 
@@ -30,7 +30,7 @@
 
 
 -->
-<img src="assets/icon/iniciobtn.svg" alt="Logo" >
+<img src="assets/icon/iniciobtn.svg" alt="Logo" (click)="loginUser()">
 
 
 </div>
