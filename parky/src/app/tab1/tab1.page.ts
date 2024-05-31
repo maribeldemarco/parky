@@ -17,11 +17,18 @@ export class Tab1Page {
   
   async loginUser() {
     this.auth.logIn(this.email, this.password).then((userCredential) => {
-      console.log(userCredential);
       this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
       alert('Email y/o contraseña incorrecta.');
+    });
+  }
+  async loginGoogle() {
+    this.auth.logInGoogle().then((userCredential) => {
+      this.router.navigate(['/tabs'])
+    }).catch((error) => {
+      console.log(error.code);
+      alert('Google Error.');
     });
   }
 }

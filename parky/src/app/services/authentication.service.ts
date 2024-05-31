@@ -1,7 +1,9 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { GoogleAuthProvider } from "firebase/auth";
 
+// Esto requiere de mejora de seguridad... no deberia de estar publico :S
 const firebaseConfig = {
   apiKey: "AIzaSyAIeokwp0IGLSh2c5KXZwMEnmca3Q3-V0U",
   authDomain: "parky-d6de6.firebaseapp.com",
@@ -13,6 +15,8 @@ const firebaseConfig = {
 };
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
+provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
 
 @Injectable({
   providedIn: 'root'
@@ -24,11 +28,14 @@ export class AuthenticationService {
   async logIn(email: string, password: string) {
     return signInWithEmailAndPassword(auth, email, password)
   }
+  async logInGoogle() {
+    return signInWithPopup(auth, provider);
+  }
   async logOut(){
     signOut(auth).then(() => {
-      // Sign-out successful.
+      console.log("Log out exitoso!")
     }).catch((error) => {
-      // An error happened.
+      console.log(error.code)
     });
   }
 }
