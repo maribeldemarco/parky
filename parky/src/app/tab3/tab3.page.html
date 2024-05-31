@@ -25,10 +25,10 @@
 
 <p class="fuente2"> Por favor, ingresá tu email. Recibirás un link para reestablecer tu contraseña.</p>
 
-<input class="input" type="email" placeholder="Correo electrónico">
-<img src="assets/icon/enviar.svg" alt="Logo"  >
+<input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
+<img (click)="recoverPassword()" src="assets/icon/enviar.svg" alt="Logo"  >
 
-<p class="fuente2"> Regresar al inicio  </p>
+<p class="fuente2" (click)="backToLogin()"> Regresar al inicio  </p>
 
 </div>
 

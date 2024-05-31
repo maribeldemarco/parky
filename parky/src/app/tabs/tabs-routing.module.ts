@@ -10,11 +10,11 @@ const routes: Routes = [
       {
         path: '',
         pathMatch: 'full',
-        redirectTo: 'tab3',
+        redirectTo: 'tab4',
       },
       {
-        path: 'tab3',
-        loadChildren: () => import('../tab3/tab3.module').then(m => m.Tab3PageModule)
+        path: 'tab4',
+        loadChildren: () => import('../tab4/tab4.module').then(m => m.Tab4PageModule)
       },
     ]
   },

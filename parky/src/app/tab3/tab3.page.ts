@@ -8,14 +8,17 @@ import { AuthenticationService } from '../services/authentication.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  email: string = ''
 
   constructor(
     public auth: AuthenticationService,
     public router: Router
   ) { }
 
-  logout() {
-    this.auth.logOut()
+  recoverPassword(email: string) {
+    this.auth.resetPassword(email)
+  }
+  backToLogin() {
     this.router.navigate(['/login'])
   }
 
