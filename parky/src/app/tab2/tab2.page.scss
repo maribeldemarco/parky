@@ -1,0 +1,66 @@
+
+
+.contenedor {
+    width: 100%;
+    text-align: center; /* Esto centra el contenido dentro del div */
+}
+
+
+.logoparky {width: 142px;
+    height: 60px;
+    margin-top: 87px !important;
+    gap: 0px;
+    opacity: 0px;
+    
+    }
+
+    .fuente {
+        //styleName: Subtitulos;
+font-family: Roboto;
+font-size: 20px;
+font-weight: 600;
+line-height: 23.44px;
+color: antiquewhite;
+
+    }
+
+
+ 
+      ion-content {
+        --background: linear-gradient(to bottom, #3F236A, #7C45D0
+        ) !important;
+      }
+
+      .input {
+        width: 298px;
+        height: 41px;
+        display: block !important;
+        margin: auto;
+        margin-top: 20px;
+
+        }
+      
+       
+        
+        ion-button {
+            display: block; /* Hace que el botón se muestre como un bloque */
+            margin:  auto; 
+            height: 38px;
+        margin-top: 20px;
+        opacity: 0px;
+width: 200px; 
+        }
+
+        .lineaseparadora { width: 284px;
+            height: 0px;
+            color: antiquewhite;
+            margin: auto;
+            border: 1px 0px 0px 0px;
+            opacity: 0px;
+            border: 1px solid #FFFFFF;
+            margin-top: 15px;
+            }
+      img {margin: auto;
+    display: block;
+    margin-top: 25px;
+}
