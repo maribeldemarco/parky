@@ -8,8 +8,9 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab2',
-        loadChildren: () => import('../tab2/tab2.module').then(m => m.Tab2PageModule)
+        path: '',
+        pathMatch: 'full',
+        redirectTo: 'tab3',
       },
       {
         path: 'tab3',

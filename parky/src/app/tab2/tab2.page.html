@@ -20,16 +20,16 @@
 </div>
 
 <div class="contenedor">
-      <input class="input" type="email" placeholder="Correo electrónico">
+      <input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
 
-      <input  class="input"  placeholder="Contraseña">
+      <input [(ngModel)]="password"  class="input"  placeholder="Contraseña">
 
 
      <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
 
 
 -->
-<img src="assets/icon/crearcuenta.svg" alt="Logo"  >
+<img src="assets/icon/crearcuenta.svg" alt="Logo" (click)="register()" >
 
 
 </div>

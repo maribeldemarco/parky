@@ -31,4 +31,7 @@ export class Tab1Page {
       alert('Google Error.');
     });
   }
+  register() {
+    this.router.navigate(['/crearcuenta'])
+  }
 }

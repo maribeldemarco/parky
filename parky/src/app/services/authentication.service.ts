@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut, createUserWithEmailAndPassword } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 
 // Esto requiere de mejora de seguridad... no deberia de estar publico :S
@@ -37,5 +37,8 @@ export class AuthenticationService {
     }).catch((error) => {
       console.log(error.code)
     });
+  }
+  async signUp(email: string, password: string) {
+    return createUserWithEmailAndPassword(auth, email, password)
   }
 }
