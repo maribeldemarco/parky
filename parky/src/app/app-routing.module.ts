@@ -4,11 +4,11 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+    loadChildren: () => import('./login/tab1.module').then(m => m.Tab1PageModule)
   },
   {
     path: 'login',
-    loadChildren: () => import('./tab1/tab1.module').then(m => m.Tab1PageModule)
+    loadChildren: () => import('./login/tab1.module').then(m => m.Tab1PageModule)
   },
   {
     path: 'tabs',
@@ -16,15 +16,15 @@ const routes: Routes = [
   },
   {
     path: 'crearcuenta',
-    loadChildren: () => import('./tab2/tab2.module').then(m => m.Tab2PageModule),
+    loadChildren: () => import('./register/tab2.module').then(m => m.Tab2PageModule),
   },
   {
     path: 'recuperarclave',
-    loadChildren: () => import('./tab3/tab3.module').then(m => m.Tab3PageModule),
+    loadChildren: () => import('./forgotPassword/tab3.module').then(m => m.Tab3PageModule),
   },
   {
     path: 'tab4',
-    loadChildren: () => import('./tab4/tab4.module').then( m => m.Tab4PageModule)
+    loadChildren: () => import('./home/tab4.module').then( m => m.Tab4PageModule)
   }
 
 ];

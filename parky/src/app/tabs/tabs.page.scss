@@ -1,1 +1,49 @@
+ion-content {
+    --background: linear-gradient(to bottom, #3F236A, #7C45D0) !important;
+    
+    
+}
+ion-tab-bar {
+    --background: #3F236A;
+}
 
+  ion-toolbar {
+    --background: none;
+    --border-style: none;
+  }
+
+
+  //MENU
+
+div {
+  display: flex;
+  justify-content: center;  
+}
+
+.item-menu {
+  padding-left: 10px;
+}
+
+.menu {
+  --background: linear-gradient(to bottom, #3F236A, #7C45D0)
+
+}
+
+.lista {
+  background: none ;
+}
+
+ion-item {
+  --background: none;
+}
+
+.avatar {
+  display: grid;
+  place-items: center; 
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+ion-avatar img {
+  width: 100px;
+}

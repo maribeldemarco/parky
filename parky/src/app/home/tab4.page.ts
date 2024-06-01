@@ -10,12 +10,8 @@ import { AuthenticationService } from '../services/authentication.service';
 export class Tab4Page {
 
   constructor(
-    public auth: AuthenticationService,
-    public router: Router
+
   ) { }
 
-  logout() {
-    this.auth.logOut()
-    this.router.navigate(['/login'])
-  }
+
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-
+import { AuthenticationService } from '../services/authentication.service';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
@@ -7,6 +8,15 @@ import { Component } from '@angular/core';
 })
 export class TabsPage {
 
-  constructor() {}
+  constructor(
+    public auth: AuthenticationService,
+    public router: Router
+  ) { }
+
+  logout() {
+    this.auth.logOut()
+    this.router.navigate(['/login'])
+  }
 
 }
+
