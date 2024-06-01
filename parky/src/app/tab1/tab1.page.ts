@@ -34,4 +34,7 @@ export class Tab1Page {
   register() {
     this.router.navigate(['/crearcuenta'])
   }
+  goToRecover() {
+    this.router.navigate(['/recuperarclave'])
+  }
 }
