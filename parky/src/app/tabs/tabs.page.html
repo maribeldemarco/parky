@@ -17,60 +17,62 @@
 
   </ion-toolbar>
 
-  
+<header>
 <!-- MENU -->
-  <ion-menu side="end" contentId="main-content">
-    <ion-content class="menu" >
-      <div class="avatar">      
-        <ion-toolbar >
-          <ion-avatar>
-            <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
-          </ion-avatar>
+<ion-menu side="end" contentId="main-content">
+  <ion-content class="menu" >
+    <div class="avatar">      
+      <ion-toolbar >
+        <ion-avatar>
+          <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+        </ion-avatar>
 
-        </ion-toolbar>
-      </div>
+      </ion-toolbar>
+    </div>
 
-      <ion-list [inset]="true" class="lista">
-        <!-- INICIO -->
-        <ion-item [button]="true">
-          <ion-icon name="home-outline"></ion-icon>
-          <ion-label class="item-menu">Inicio</ion-label>
-        </ion-item>
-        <!-- MI CUENTA -->
-        <ion-item [button]="true">
-          <ion-icon name="person-circle-outline"></ion-icon>
-          <ion-label class="item-menu">Mi cuenta</ion-label>
-        </ion-item>
-        <!-- AYUDA -->
-        <ion-item [button]="true">
-          <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
-          <ion-label class="item-menu">Ayuda</ion-label>
-        </ion-item>
-        <!-- PREGUNTAS FRECUENTES -->
-        <ion-item [button]="true">
-          <ion-icon name="help-circle-outline"></ion-icon>
-          <ion-label class="item-menu">Preguntas Frecuentes</ion-label>
-        </ion-item>
-        <!-- CERRAR SESION -->
-        <ion-item [button]="true" (click)="logout()">
-          <ion-icon name="exit-outline" ></ion-icon>
-          <ion-label class="item-menu">Cerrar Sesión</ion-label>
-        </ion-item>
+    <ion-list [inset]="true" class="lista">
+      <!-- INICIO -->
+      <ion-item [button]="true">
+        <ion-icon name="home-outline"></ion-icon>
+        <ion-label class="item-menu">Inicio</ion-label>
+      </ion-item>
+      <!-- MI CUENTA -->
+      <ion-item [button]="true" (click)="miCuenta()">
+        <ion-icon name="person-circle-outline"></ion-icon>
+        <ion-label class="item-menu" >Mi cuenta</ion-label>
+      </ion-item>
+      <!-- AYUDA -->
+      <ion-item [button]="true">
+        <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        <ion-label class="item-menu">Ayuda</ion-label>
+      </ion-item>
+      <!-- PREGUNTAS FRECUENTES -->
+      <ion-item [button]="true">
+        <ion-icon name="help-circle-outline"></ion-icon>
+        <ion-label class="item-menu">Preguntas Frecuentes</ion-label>
+      </ion-item>
+      <!-- CERRAR SESION -->
+      <ion-item [button]="true" (click)="logout()">
+        <ion-icon name="exit-outline" ></ion-icon>
+        <ion-label class="item-menu">Cerrar Sesión</ion-label>
+      </ion-item>
 
-      </ion-list>    
-    </ion-content>
-  </ion-menu>
+    </ion-list>    
+  </ion-content>
+</ion-menu>
+
+</header>
 
   
 <!-- NAV-BAR -->
   <ion-tabs>
   
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="tab1" href="/tabs/tab1">
+      <ion-tab-button tab="tab1" href="/tabs/tab1" (click)="backToHome">
         <ion-icon name="home-outline"></ion-icon>
       </ion-tab-button>
   
-      <ion-tab-button tab="tab2" href="/tabs/tab2">
+      <ion-tab-button tab="tab2" href="/tabs/tab2" (click)="miCuenta()">
         <ion-icon name="person-circle-outline"></ion-icon>
       </ion-tab-button>
   

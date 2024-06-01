@@ -20,7 +20,7 @@ font-family: Roboto;
 font-size: 20px;
 font-weight: 600;
 line-height: 23.44px;
-color: antiquewhite;
+color: #ffffff;
 
     }
 
@@ -38,13 +38,15 @@ margin-bottom: 15px;
         ) !important;
       }
 
-      .input {
+      .input  {
         width: 298px;
         height: 41px;
         display: block !important;
         margin: auto;
         margin-top: 20px;
-
+        background: white;
+        color: black;
+        border-radius: 10px;
         }
       
        

@@ -27,4 +27,10 @@ export class Tab2Page {
       alert('Email ya registrado.');
     });
   }
+
+  backToLogin() {
+    this.router.navigate(['/login'])
+  }
+
+
 }

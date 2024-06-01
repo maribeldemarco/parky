@@ -18,5 +18,13 @@ export class TabsPage {
     this.router.navigate(['/login'])
   }
 
+  miCuenta() {
+    this.router.navigate(['/profile']);
+  }
+
+  backToHome() {
+    this.router.navigate(['/home']);
+  }
+
 }
 

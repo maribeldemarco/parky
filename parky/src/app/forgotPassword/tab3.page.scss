@@ -12,11 +12,12 @@
 
     .fuente {
         //styleName: Subtitulos;
-font-family: Roboto;
-font-size: 20px;
-font-weight: 600;
-color: antiquewhite;
-text-align: center; /* Centra el texto horizontalmente */
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 600;
+    color: antiquewhite;
+    margin-top: 0px;
+    text-align: center; /* Centra el texto horizontalmente */
     }
 
 
@@ -25,9 +26,12 @@ text-align: center; /* Centra el texto horizontalmente */
         font-size: 15px !important; /* Tamaño de fuente diferente */
         font-weight: 200 !important;
         color: antiquewhite;
-margin-top: 15px;
-margin-bottom: 15px;
-text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+        
     }
       ion-content {
         --background: linear-gradient(to bottom, #3F236A, #7C45D0
@@ -35,12 +39,14 @@ text-align: center;
       }
 
       .input {
-        width: 230px;
+        width: 250px;
         height: 41px;
-        border-radius: 3px;
+        border-radius: 10px;
         display: block !important;
         margin: auto;
         margin-top: 20px;
+        background: white;
+        color: black;
 
         }
 
@@ -53,14 +59,14 @@ text-align: center;
             margin: auto;
             border: 1px 0px 0px 0px;
             opacity: 0px;
-            border-radius: 5px;
+            border-radius: 10px;
             margin-top: 40px;
             padding-top: 50px; /* Ajusta según necesites */
             padding-bottom: 20px;            }
 
             
       img {margin: auto;
-    display: block;
-    margin-top: 25px;
+        display: block;
+        margin-top: 25px;
 
-}
+          } 

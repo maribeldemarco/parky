@@ -6,11 +6,7 @@
   <!-- Contenido aquí -->
 
 
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
   <div class="contenedor">
 
   <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
@@ -23,6 +19,7 @@
       <input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
 
       <input [(ngModel)]="password"  class="input"  placeholder="Contraseña">
+      
 
 
      <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
@@ -37,6 +34,12 @@
 
 
 <hr class="lineaseparadora">
+
+<div class="contenedor">
+  <h4 class="fuente2" (click)="backToLogin()"> Regresar al inicio  </h4>
+</div>
+
+
 
 
 
