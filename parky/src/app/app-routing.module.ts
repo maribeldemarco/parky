@@ -25,9 +25,10 @@ const routes: Routes = [
   {
     path: 'tab4',
     loadChildren: () => import('./home/tab4.module').then( m => m.Tab4PageModule)
-  },  {
+  },
+  {
     path: 'profile',
-    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+    loadChildren: () => import('./profile/tab5.module').then( m => m.ProfilePageModule)
   }
 
 

@@ -1,0 +1,55 @@
+ion-content {
+    --background: linear-gradient(to bottom, #3F236A, #7C45D0) !important;
+    
+    
+}
+ion-tab-bar {
+    --background: #3F236A;
+}
+
+  ion-toolbar {
+    --background: none;
+    --border-style: none;
+  }
+
+
+  //MENU
+
+.avatar {
+  display: flex;
+  justify-content: center;  
+}
+
+.item-menu {
+  padding-left: 10px;
+}
+
+.lista {
+  background: none ;
+}
+
+ion-item {
+  --background: none;
+}
+
+.avatar {
+  display: grid;
+  place-items: center; 
+  margin-top: 20%;
+  margin-bottom: 20%;
+}
+
+ion-avatar img {
+  width: 100px;
+}
+
+//MI CUENTA
+
+.miCuenta-contenedor {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+}
+
+
+
