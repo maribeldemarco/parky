@@ -30,9 +30,9 @@
       </ion-toolbar>
     </div>
 
-    <ion-list [inset]="true" class="lista">
+    <ion-list class="lista">
       <!-- INICIO -->
-      <ion-item [button]="true" (click)="backToHome">
+      <ion-item [button]="true" (click)="backToHome()">
         <ion-icon name="home-outline"></ion-icon>
         <ion-label class="item-menu">Inicio</ion-label>
       </ion-item>
@@ -68,11 +68,11 @@
   <ion-tabs>
   
     <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="tab1" href="/tabs/tab1" (click)="backToHome">
+      <ion-tab-button tab="tab4" href="/tabs/tabs/tab1" (click)="backToHome()">
         <ion-icon name="home-outline"></ion-icon>
       </ion-tab-button>
   
-      <ion-tab-button tab="tab2" href="/tabs/tab2" (click)="miCuenta()">
+      <ion-tab-button tab="tab5" href="/tabs/tabs/tab2" (click)="miCuenta()">
         <ion-icon name="person-circle-outline"></ion-icon>
       </ion-tab-button>
   
