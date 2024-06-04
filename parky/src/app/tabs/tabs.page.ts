@@ -19,12 +19,13 @@ export class TabsPage {
   }
 
   miCuenta() {
-    this.router.navigate(['/profile']);
+    this.router.navigate(['/tabs/tabs/tab5']);
   }
 
   backToHome() {
-    this.router.navigate(['/home']);
+    this.router.navigate(['/tabs/tabs/tab4']);
   }
 
 }
+
 
