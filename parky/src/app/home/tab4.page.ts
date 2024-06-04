@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from '../services/authentication.service';
 
 @Component({
   selector: 'app-tab4',
@@ -9,9 +7,6 @@ import { AuthenticationService } from '../services/authentication.service';
 })
 export class Tab4Page {
 
-  constructor(
-
-  ) { }
-
-
+  constructor() { }
+  
 }
