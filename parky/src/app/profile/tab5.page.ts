@@ -1,34 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { AuthenticationService } from '../services/authentication.service';
-
 
 @Component({
-  selector: 'app-profile',
+  selector: 'app-tab5',
   templateUrl: './tab5.page.html',
   styleUrls: ['./tab5.page.scss'],
-
 })
-export class ProfilePage {
+export class Tab5Page {
 
-  constructor(
-    public auth: AuthenticationService,
-    public router: Router
-  ) { }
-
-  logout() {
-    this.auth.logOut()
-    this.router.navigate(['/login'])
-  }
-
-  miCuenta() {
-    this.router.navigate(['/profile']);
-  }
-
-  backToHome() {
-    this.router.navigate(['/home']);
-  }
-
-
+  constructor() { }
 
 }
+
