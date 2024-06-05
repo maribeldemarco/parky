@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-user',
   templateUrl: './user.page.html',
@@ -7,8 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserPage implements OnInit {
 
-  constructor() { }
+  constructor(
+    public router: Router
+  ) { }
 
+  backToHome() {
+    this.router.navigate(['/tabs/tabs/tab4']);
+  }
   ngOnInit() {
   }
 
