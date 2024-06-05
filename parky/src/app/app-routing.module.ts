@@ -30,7 +30,11 @@ const routes: Routes = [
   {
     path: 'profile',
     loadChildren: () => import('./profile/tab5.module').then( m => m.Tab5PageModule)
+  },  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
+
 
 ];
 @NgModule({

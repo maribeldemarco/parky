@@ -14,25 +14,24 @@
     
     }
 
-    .fuente {
-        //styleName: Subtitulos;
-font-family: Roboto;
-font-size: 20px;
-font-weight: 600;
-line-height: 23.44px;
-color: #ffffff;
+.fuente {
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 23.44px;
+  color: #ffffff;
 
-    }
+}
 
 
-    .fuente2 {
-        /* Estilos específicos solo para el segundo elemento */
-        font-size: 15px !important; /* Tamaño de fuente diferente */
-        font-weight: 200 !important;
-        color: antiquewhite;
-margin-top: 15px;
-margin-bottom: 15px;
-    }
+.fuente2 {
+  /* Estilos específicos solo para el segundo elemento */
+  font-size: 15px !important; /* Tamaño de fuente diferente */
+  font-weight: 200 !important;
+  color: antiquewhite;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
       ion-content {
         --background: linear-gradient(to bottom, #3F236A, #7C45D0
         ) !important;
