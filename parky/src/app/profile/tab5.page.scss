@@ -3,7 +3,6 @@
 .miCuenta-contenedor {
     background: rgba(0, 0, 0, 0.5);
     margin: 20px;
-    margin-top: 70px;
     border-radius: 10px;
     padding-bottom: 20px;
 }
@@ -16,4 +15,19 @@
     padding-right: 15px;
 }
 
+//IMAGEN PERFIL
+
+.img-profile {
+        width: 150px;
+        height: 150px;
+        margin-top: 45px !important;
+        gap: 0px;
+        opacity: 0px;
+        margin-bottom: 0px !important;
+}
+
+.contenedor {
+    width: 100%;
+    text-align: center; /* Esto centra el contenido dentro del div */
+}
 
