@@ -32,6 +32,10 @@ const routes: Routes = [
         path: 'tab8',
         loadChildren: () => import('../profile-estacionamiento/tab8.module').then( m => m.Tab8PageModule)
       },
+      {
+        path: 'tab9',
+        loadChildren: () => import('../busco-estacionamiento/tab9.module').then( m => m.Tab9PageModule)
+      },
       // Agregar otras rutas según sea necesario
     ]
   },
