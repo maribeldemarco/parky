@@ -22,6 +22,7 @@
     "@angular/platform-browser-dynamic": "^17.0.2",
     "@angular/router": "^17.0.2",
     "@capacitor/core": "6.0.0",
+    "@capacitor/geolocation": "^6.0.0",
     "@ionic/angular": "^8.0.0",
     "firebase": "^10.12.1",
     "ionicons": "^7.0.0",
