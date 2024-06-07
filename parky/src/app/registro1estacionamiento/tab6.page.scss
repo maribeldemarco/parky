@@ -1,0 +1,50 @@
+//MI CUENTA
+
+.miCuenta-contenedor {
+    background: rgba(0, 0, 0, 0.5);
+    margin: 20px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+}
+
+.miCuenta-contenedor ion-toolbar, ion-item {
+    --background: none;
+}
+
+.miCuenta-contenedor ion-item {
+    padding-right: 15px;
+}
+
+//IMAGEN PERFIL
+
+.img-profile {
+        width: 150px;
+        height: 150px;
+        margin-top: 45px !important;
+        gap: 0px;
+        opacity: 0px;
+        margin-bottom: 0px !important;
+}
+
+.contenedor {
+    width: 100%;
+    text-align: center; /* Esto centra el contenido dentro del div */
+}
+
+.input  {
+    width: 298px;
+    height: 41px;
+    display: block !important;
+     margin-top: 20px;
+    background: white;
+    color: black;
+    border-radius: 10px;
+    }
+
+    h3 {
+        text-align: left !important;
+      }
+
+.imgsig{      margin-top: 20px;}
+
+  

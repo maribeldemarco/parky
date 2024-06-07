@@ -11,6 +11,9 @@ const routes: Routes = [
     path: 'tabs',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
+
+
+
   // Otras rutas fuera del sistema de tabs aquí
 ];
 
