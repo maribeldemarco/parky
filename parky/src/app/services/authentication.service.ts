@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { initializeApp } from "firebase/app";
-import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut, createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword, signInWithPopup, signOut, UserCredential, createUserWithEmailAndPassword, sendPasswordResetEmail } from "firebase/auth";
 import { GoogleAuthProvider } from "firebase/auth";
 import { environment } from 'src/environments/environment';
 
@@ -34,5 +34,8 @@ export class AuthenticationService {
   }
   async resetPassword(email: string) {
     return sendPasswordResetEmail(auth, email)
+  }
+  async currentUser() {
+    return auth.currentUser
   }
 }

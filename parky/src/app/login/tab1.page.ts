@@ -10,13 +10,14 @@ import { Router } from '@angular/router';
 export class Tab1Page {
   password: string = '';
   email: string = '';
+  user = undefined
   constructor(
     public auth: AuthenticationService,
     public router: Router
   ) { }
   
   async loginUser() {
-    this.auth.logIn(this.email, this.password).then((userCredential) => {
+    this.auth.logIn(this.email, this.password).then(() => {
       this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
@@ -24,7 +25,7 @@ export class Tab1Page {
     });
   }
   async loginGoogle() {
-    this.auth.logInGoogle().then((userCredential) => {
+    this.auth.logInGoogle().then(() => {
       this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
