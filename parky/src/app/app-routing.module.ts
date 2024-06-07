@@ -14,6 +14,10 @@ const routes: Routes = [
 
 
 
+
+
+
+
   // Otras rutas fuera del sistema de tabs aquí
 ];
 
