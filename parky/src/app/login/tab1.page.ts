@@ -14,10 +14,10 @@ export class Tab1Page {
     public auth: AuthenticationService,
     public router: Router
   ) { }
-
+  
   async loginUser() {
     this.auth.logIn(this.email, this.password).then((userCredential) => {
-      this.router.navigate(['/tabs/tab4'])
+      this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
       alert('Email y/o contraseña incorrecta.');
@@ -25,16 +25,16 @@ export class Tab1Page {
   }
   async loginGoogle() {
     this.auth.logInGoogle().then((userCredential) => {
-      this.router.navigate(['/tabs/tab4'])
+      this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);
       alert('Google Error.');
     });
   }
   register() {
-    this.router.navigate(['/tabs/tab2'])
+    this.router.navigate(['/crearcuenta'])
   }
   goToRecover() {
-    this.router.navigate(['tabs/tab3'])
+    this.router.navigate(['/recuperarclave'])
   }
 }
