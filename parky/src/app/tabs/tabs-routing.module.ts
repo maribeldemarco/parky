@@ -13,11 +13,11 @@ const routes: Routes = [
         redirectTo: 'tab4',
       },
       {
-        path: 'tab4',
+        path: 'home',
         loadChildren: () => import('../home/tab4.module').then(m => m.Tab4PageModule)
       },
       {
-        path: 'tab5',
+        path: 'profile',
         loadChildren: () => import('../profile/tab5.module').then(m => m.Tab5PageModule)
       },
       {
