@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 import { Geolocation } from '@capacitor/geolocation';
-import { MapService } from '../services/map.service';
 
 
 @Component({
@@ -13,7 +12,7 @@ export class Tab4Page {
   busqueda: string = 'Buenos Aires'
   mapUrl = this.sanitice('https://www.openstreetmap.org/export/embed.html?bbox=-58.55%2C-34.77%2C-58.35%2C-34.57&amp;layer=mapnik')
 
-  constructor(private sanitizer: DomSanitizer, public map: MapService) { }
+  constructor(private sanitizer: DomSanitizer) { }
   sanitice(url: string) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url)
   }
@@ -25,7 +24,6 @@ export class Tab4Page {
     let error = coordinates.coords.accuracy / 1000000
     let lat = coordinates.coords.latitude;
     let long = coordinates.coords.longitude;
-    this.map.test();
     this.mapUrl = this.sanitice(`https://www.openstreetmap.org/export/embed.html?bbox=${long - error}%2C${lat - error}%2C${long + error * 10}%2C${lat + error}&amp;layer=mapnik`)
   }
 }
