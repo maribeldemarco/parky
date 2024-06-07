@@ -17,9 +17,10 @@ export class Tab3Page {
 
   recoverPassword() {
     this.auth.resetPassword(this.email)
+    this.router.navigate(['/tabs/tab1'])
   }
   backToLogin() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/tabs/tab1'])
   }
 
 }

@@ -4,13 +4,20 @@ import { TabsPage } from './tabs.page';
 
 const routes: Routes = [
   {
-    path: 'tabs',
+    path: '',
     component: TabsPage,
     children: [
       {
-        path: '',
-        pathMatch: 'full',
-        redirectTo: 'tab4',
+        path: 'tab1',
+        loadChildren: () => import('../login/tab1.module').then(m => m.Tab1PageModule)
+      },
+      {
+        path: 'tab2',
+        loadChildren: () => import('../register/tab2.module').then(m => m.Tab2PageModule)
+      },
+      {
+        path: 'tab3',
+        loadChildren: () => import('../forgotPassword/tab3.module').then(m => m.Tab3PageModule)
       },
       {
         path: 'tab4',
@@ -20,17 +27,18 @@ const routes: Routes = [
         path: 'tab5',
         loadChildren: () => import('../profile/tab5.module').then(m => m.Tab5PageModule)
       },
+      // Agregar otras rutas según sea necesario
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tabs',
+    redirectTo: '/tabs/tab1',
     pathMatch: 'full'
   },
-
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
 })
 export class TabsPageRoutingModule {}

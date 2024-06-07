@@ -21,7 +21,7 @@ export class Tab2Page {
   }
   register() {
     this.auth.signUp(this.email, this.password).then((userCredential) => {
-      this.router.navigate(['/tabs'])
+      this.router.navigate(['/tabs/tab1'])
     }).catch((error) => {
       console.log(error.code);
       alert('Email ya registrado.');
@@ -29,7 +29,7 @@ export class Tab2Page {
   }
 
   backToLogin() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/tabs/tab1'])
   }
 
 
