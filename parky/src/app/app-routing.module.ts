@@ -34,6 +34,8 @@ const routes: Routes = [
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
 
+
+
 ];
 
 
