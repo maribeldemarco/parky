@@ -1,10 +1,20 @@
+.logoparky {width: 142px;
+    height: 60px;
+    margin-top: 87px !important;
+    gap: 0px;
+    opacity: 0px;
+    
+}
 
 .miCuenta-contenedor {
     background: rgba(0, 0, 0, 0.5);
-    margin: 20px;
+    margin-top: 70px;
+    margin-left: 20px;
+    margin-right: 20px;
     border-radius: 10px;
     padding-bottom: 20px;
 }
+
 
 .miCuenta-contenedor ion-toolbar, ion-item {
     --background: none;
@@ -45,3 +55,16 @@
       }
 
 .imgsig{      margin-top: 20px;}
+
+  //BOTONES
+
+  .btn-guardar {
+    padding: 5px;
+    margin: 20px;
+    border-radius: 10px;
+    background: #3F236A;
+    font-size: 15px !important;
+    font-weight: 200 !important;
+    color: white;
+    text-transform: none;
+}

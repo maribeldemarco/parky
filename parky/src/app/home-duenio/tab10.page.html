@@ -1,0 +1,51 @@
+<div class="contenedor">
+
+  <div class="miCuenta-contenedor">
+      <ion-title class="ion-text-start">Mi estacionamiento</ion-title>
+  </div>
+
+  <img src="assets/img-estacion.jpg" class="img-estacionamiento" alt="">
+
+  
+    <ion-item class="lista" >
+      <img class="img-transp" src="assets/auto.jpg" alt="">
+      <ion-select
+        label="Autos"
+        [interfaceOptions]="customActionSheetOptions"
+        interface="action-sheet"
+      >
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="lista">
+      <img class="img-transp" src="assets/moto.jpg" alt="">
+      <ion-select
+        label="Motos"
+        [interfaceOptions]="customActionSheetOptions"
+        interface="action-sheet"
+      >
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+    <ion-item class="lista">
+      <img class="img-transp" src="assets/bici.jpg" alt="">
+      <ion-select
+      
+        label="Bicicletas"
+        [interfaceOptions]="customActionSheetOptions"
+        interface="action-sheet"
+
+      >
+        <ion-select-option value="red">Red</ion-select-option>
+        <ion-select-option value="green">Green</ion-select-option>
+        <ion-select-option value="blue">Blue</ion-select-option>
+      </ion-select>
+    </ion-item>
+
+
+    
+
+</div>

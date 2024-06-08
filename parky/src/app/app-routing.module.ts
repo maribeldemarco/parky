@@ -33,6 +33,11 @@ const routes: Routes = [
     path: 'user',
     loadChildren: () => import('./user/user.module').then( m => m.UserPageModule)
   },
+  {
+    path: 'home-duenio',
+    loadChildren: () => import('./home-duenio/tab10.module').then( m => m.Tab10PageModule)
+  },
+
 
 
 
