@@ -7,13 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Tab10Page implements OnInit {
 
-
-  customActionSheetOptions = {
-    header: 'Autos',
-    subHeader: 'Cupo Total:',
-
-  };
-
   constructor() { }
 
   ngOnInit() {

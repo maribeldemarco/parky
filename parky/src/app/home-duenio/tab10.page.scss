@@ -4,29 +4,60 @@
 
 //POSICION IMG
 
-.img-estacionamiento {
+.estacionamiento {
+    margin: 20px;
     margin-top: 30px;
-    width: 100%;
-    height: 30%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
+.img-estacionamiento {
+    border-radius: 10px;
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+
+}
+
+.info-estacionamiento {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que este div ocupe el espacio restante */
+  }
 //BOTONES AUTO, BICI, MOTO
 
-ion-list {
-    background-color: none;
-}
-.lista {
-    background: rgba(0, 0, 0, 0.5);
-    margin-right: 20px;
-    margin-left: 20px;
-    margin-top: 30px;
-    border-radius: 10px;
-    padding-bottom: 20px;    
+.acordeon {
+    margin: 20px;
+    
 }
 
+.transporte {
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 30px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fondo-transporte {
+    --background: none;
+    --border-style: none;
+}
+
+ion-label {
+    margin-left: 15px;
+}
+
+.margin {
+    margin: 0%;
+}
 //img transporte
 
 .img-transp{
     border-radius: 15px ;
 
 }
+

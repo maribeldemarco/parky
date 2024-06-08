@@ -4,48 +4,109 @@
       <ion-title class="ion-text-start">Mi estacionamiento</ion-title>
   </div>
 
-  <img src="assets/img-estacion.jpg" class="img-estacionamiento" alt="">
 
-  
-    <ion-item class="lista" >
-      <img class="img-transp" src="assets/auto.jpg" alt="">
-      <ion-select
-        label="Autos"
-        [interfaceOptions]="customActionSheetOptions"
-        interface="action-sheet"
-      >
-      </ion-select>
-    </ion-item>
+  <!-- ACORDEON AUTO, MOTO, BICI -->
 
-    <ion-item class="lista">
-      <img class="img-transp" src="assets/moto.jpg" alt="">
-      <ion-select
-        label="Motos"
-        [interfaceOptions]="customActionSheetOptions"
-        interface="action-sheet"
-      >
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-        <ion-select-option value="blue">Blue</ion-select-option>
-      </ion-select>
-    </ion-item>
+  <ion-accordion-group class="acordeon">
 
-    <ion-item class="lista">
-      <img class="img-transp" src="assets/bici.jpg" alt="">
-      <ion-select
+    <!-- AUTO -->
+    <ion-accordion class="transporte" value="first">
+      <ion-item class="fondo-transporte" slot="header">
+        <img class="img-transp" src="assets/auto.jpg" alt="">
+        <ion-label>Autos</ion-label>
+      </ion-item>
+
+      <!-- DESPLEGABLE -->
+      <div slot="content">
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Cupo Total: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Disponibilidad: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por hora: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por día - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa mensual: - </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+
+    <!-- MOTO -->
+    <ion-accordion class="transporte" value="second">
+      <ion-item class="fondo-transporte" slot="header">
+        <img class="img-transp" src="assets/moto.jpg" alt="">
+        <ion-label>Motos</ion-label>
+      </ion-item>
+      <!-- DESPLEGABLE -->
+      <div slot="content">
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Cupo Total: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Disponibilidad: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por hora: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por día - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa mensual: - </ion-label>
+        </ion-item>
+      </div>
+    </ion-accordion>
+
+    <!-- BICI -->
+    <ion-accordion class="transporte" value="third">
+      <ion-item class="fondo-transporte" slot="header">
+        <img class="img-transp" src="assets/bici.jpg" alt="">
+        <ion-label>Bicicletas</ion-label>
+      </ion-item>
       
-        label="Bicicletas"
-        [interfaceOptions]="customActionSheetOptions"
-        interface="action-sheet"
+      <!-- DESPLEGABLE -->
+      <div slot="content">
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Cupo Total: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Disponibilidad: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por hora: - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa por día - </ion-label>
+        </ion-item>
+        <ion-item class="fondo-transporte">
+          <ion-label class="margin">Tarifa mensual: - </ion-label>
+        </ion-item>
+      </div>      
+    </ion-accordion>
+  </ion-accordion-group>    
 
-      >
-        <ion-select-option value="red">Red</ion-select-option>
-        <ion-select-option value="green">Green</ion-select-option>
-        <ion-select-option value="blue">Blue</ion-select-option>
-      </ion-select>
-    </ion-item>
+   <!-- INFO ESTACIONAMIENTO -->
+   <div class="estacionamiento">
+    <img src="assets/img-estacion.jpg" class="img-estacionamiento" alt="">
+    <div class="info-estacionamiento">
+      <ion-item class="fondo-transporte">
+        <ion-label class="margin">Estacionamiento: - </ion-label>
+      </ion-item>
+      <ion-item class="fondo-transporte">
+        <ion-label class="margin">Dirección: - </ion-label>
+      </ion-item>
+      <ion-item class="fondo-transporte">
+        <ion-label class="margin">Horario: - </ion-label>
+      </ion-item>
+    </div>
 
 
-    
+  </div>
+
 
 </div>
