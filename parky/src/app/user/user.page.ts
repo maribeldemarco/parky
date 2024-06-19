@@ -17,4 +17,12 @@ export class UserPage implements OnInit {
   ngOnInit() {
   }
 
+  registroBusca() {
+    this.router.navigate(['/tabs/tab9']);
+  }
+
+  registroDuenio() {
+    this.router.navigate(['/tabs/tab6']);
+  }
+
 }

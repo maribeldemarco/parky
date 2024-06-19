@@ -36,6 +36,10 @@ const routes: Routes = [
         path: 'tab9',
         loadChildren: () => import('../busco-estacionamiento/tab9.module').then( m => m.Tab9PageModule)
       },
+      {
+        path: 'tab10',
+        loadChildren: () => import('../home-duenio/tab10.module').then( m => m.Tab10PageModule)
+      },
       // Agregar otras rutas según sea necesario
     ]
   },
