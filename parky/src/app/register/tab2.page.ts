@@ -20,7 +20,7 @@ export class Tab2Page {
     this.router.navigate(['/login'])
   }
   register() {
-    this.auth.signUp(this.email, this.password).then((userCredential) => {
+    this.auth.signUp(this.email, this.password).then(() => {
       this.router.navigate(['/tabs'])
     }).catch((error) => {
       console.log(error.code);

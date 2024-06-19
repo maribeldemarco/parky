@@ -15,31 +15,31 @@
     </ion-toolbar>
 
 
-    <ion-item (click)="getData()">
+    <ion-item (click)="showData()">
         <ion-label>
           <h3>Nombre</h3>
-          <p>Fulanito</p>
+          <p>{{currentUser['Nombre']}}</p>
         </ion-label>
     </ion-item>
 
     <ion-item>
         <ion-label>
           <h3>Apellido</h3>
-          <p>Martínez</p>
+          <p>{{currentUser['Apellido']}}</p>
         </ion-label>
     </ion-item>
 
     <ion-item>
         <ion-label>
           <h3>Correo Electrónico</h3>
-          <p>fulanitoarrobagmail.com</p>
+          <p>{{currentUser['mail']}}</p>
         </ion-label>
     </ion-item>
     
     <ion-item>
         <ion-label>
           <h3>Fecha de Nacimiento</h3>
-          <p>25/07/1995</p>
+          <p>{{currentUser['birthdate']}}</p>
         </ion-label>
     </ion-item>
 

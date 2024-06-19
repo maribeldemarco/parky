@@ -15,15 +15,15 @@ export class TabsPage {
 
   logout() {
     this.auth.logOut()
-    this.router.navigate(['/tabs/tab1'])
+    this.router.navigate(['login'])
   }
 
   miCuenta() {
-    this.router.navigate(['profile']);
+    this.router.navigate(['/tabs/tabs/profile']);
   }
 
   backToHome() {
-    this.router.navigate(['home']);
+    this.router.navigate(['/tabs/tabs/home']);
   }
 
   cambioUsuario() {
