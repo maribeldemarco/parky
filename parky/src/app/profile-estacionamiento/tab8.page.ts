@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {  FormGroup, FormControl, Validators } from '@angular/forms';
-import { Firestore, doc, setDoc, getDoc, collection, addDoc } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
 import { AuthenticationService } from '../services/authentication.service';
+import { DatabaseService } from '../services/database.service';
 
 @Component({
   selector: 'app-tab8',
@@ -14,9 +14,9 @@ export class Tab8Page implements OnInit {
   uid: string = '';
 
   constructor(
-    private authService: AuthenticationService,
-    private firestore: Firestore,
     private router: Router,
+    private authService: AuthenticationService,
+    private database: DatabaseService
   ) {
     this.formLogin = new FormGroup({
       estacionamiento: new FormControl(''),
@@ -42,44 +42,12 @@ export class Tab8Page implements OnInit {
     });
   }
 
-  async loadProfile() {
-    try {
-      const userDocRef = doc(this.firestore, `profile/${this.uid}`);
-      const userDoc = await getDoc(userDocRef);
-      if (userDoc.exists()) {
-        this.formLogin.patchValue(userDoc.data() as any);
-      } else {
-        console.error('Document does not exist');
-      }
-    } catch (error) {
-      console.error('Error ', error);
-    }
+  loadProfile() {
+    this.database.loadProfile(this.formLogin, this.uid)
   }
 
-  async onSubmit() {
-    if (this.formLogin.valid) {
-      try {
-        const userDocRef = doc(this.firestore, `profile/${this.uid}`);
-        await setDoc(userDocRef, this.formLogin.value);
-        console.log('Perfil actualizado correctamente');
-      } catch (error) {
-        console.error('Error :', error);
-      }
-    }
+  onSubmit() {
+    this.database.onSubmit(this.formLogin, this.uid)
   }
 
-  async addUserToFirestore() {
-    try {
-      const docRef = await addDoc(collection(this.firestore, "Estacionamiento"), {
-        estacionamiento: "San juan",
-        direccion:"avenida san juan 3410",
-        telefono: 1180022393,
-        horario: "24 hs",
-        tarifa: "$5000 por hora",
-        lugaresdisponibles: 5,
-      });
-    } catch (error) {
-      console.error("Error  ", error);
-    }
-  }
 }
