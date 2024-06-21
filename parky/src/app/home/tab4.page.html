@@ -1,8 +1,8 @@
 <ion-content>
 
-<div class="search-container" >
-  <ion-searchbar showCancelButton="focus" class="custom" placeholder="ubicación"></ion-searchbar>
-</div>
+
+<div class="search-container" id="map" style="height: 400px;"></div>
+
 <div class="ion-text-center">
 <ion-button   class="ion-justify-content-center"(click)="obtenerdatos()">OBTENER TODOS LOS ESTACIONAMIENTOS</ion-button>
 </div>
@@ -19,4 +19,9 @@
       </ion-label>
     </ion-item>
   </ion-list>
+
+  
 </ion-content>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
