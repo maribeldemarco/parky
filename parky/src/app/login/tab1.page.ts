@@ -33,7 +33,7 @@ export class Tab1Page {
   }
   async loginGoogle() {
     this.auth.logInGoogle().then((userCredential) => {
-      this.router.navigate(['/tabs/tab4'])
+      this.router.navigate(['/tabs/tab10'])
     }).catch((error) => {
       console.log(error.code);
       alert('Google Error.');
