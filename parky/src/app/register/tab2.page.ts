@@ -9,6 +9,7 @@ import { ToastController } from '@ionic/angular';
 })
 export class Tab2Page {
   
+  showPassword = false;
 
   password: string = '';
   email: string = '';

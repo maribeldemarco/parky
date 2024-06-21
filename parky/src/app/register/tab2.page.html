@@ -19,7 +19,7 @@
 <div class="contenedor">
       <input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
 
-      <input [(ngModel)]="password"  class="input"  placeholder="Contraseña">
+      <input [(ngModel)]="password"  class="input"  placeholder="Contraseña" [type]="showPassword ? 'text' : 'password'">
 
 
 

@@ -8,6 +8,8 @@ import { ToastController } from '@ionic/angular';
   styleUrls: ['tab1.page.scss']
 })
 export class Tab1Page {
+  showPassword = false;
+
   password: string = '';
   email: string = '';
   tipoerrorlogin:any='';
