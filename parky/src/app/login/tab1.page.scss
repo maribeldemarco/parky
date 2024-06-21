@@ -1,10 +1,12 @@
 
 
-.contenedor {
+.contenedor, .centrado {
     width: 100%;
     text-align: center; /* Esto centra el contenido dentro del div */
 }
 
+h4.centrado{font-weight: 700 !important;
+}
 
 .logoparky {width: 142px;
     height: 60px;

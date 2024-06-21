@@ -18,11 +18,11 @@ export class UserPage implements OnInit {
   }
 
   registroBusca() {
-    this.router.navigate(['/tabs/tab9']);
+    this.router.navigate(['/tabs/tab4']);
   }
 
   registroDuenio() {
-    this.router.navigate(['/tabs/tab6']);
+    this.router.navigate(['/login']);
   }
 
 }

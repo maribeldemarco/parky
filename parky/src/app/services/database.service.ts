@@ -4,6 +4,7 @@ import { FormGroup } from '@angular/forms';
 import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
 import { AuthenticationService } from './authentication.service';
+import { ToastController } from '@ionic/angular';
 
 const app = initializeApp(environment.firebaseConfig);
 const db = getFirestore(app);
@@ -13,7 +14,7 @@ const db = getFirestore(app);
 })
 export class DatabaseService {
 
-  constructor(private auth: AuthenticationService) { }
+  constructor(private auth: AuthenticationService, private toastController: ToastController) { }
 
     async loadProfile(formLogin: FormGroup<any>, uid: string) {
       try {
@@ -34,24 +35,34 @@ export class DatabaseService {
         try {
           const userDocRef = doc(db, `profile/${uid}`);
           await setDoc(userDocRef, formLogin.value);
+          
+          this.presentToast();
           console.log('Perfil actualizado correctamente');
+          this.loadProfile(formLogin, uid);
+
         } catch (error) {
           console.error('Error :', error);
         }
       }
     }
-  async addUserToFirestore() {
-    try {
-      const docRef = await addDoc(collection(db, "Estacionamiento"), {
-        estacionamiento: "San juan",
-        direccion:"avenida san juan 3410",
-        telefono: 1180022393,
-        horario: "24 hs",
-        tarifa: "$5000 por hora",
-        lugaresdisponibles: 5,
+
+
+    async presentToast() {
+      const toast = await this.toastController.create({
+        header: 'Datos guardados. ',
+        message: 'Operación existosa',
+        duration: 4500,
+        position: 'top', // Posición del toast
+        buttons: [
+          {
+            icon: 'close',
+            role: 'cancel', // Botón de cerrar el toast
+          }
+        ]
       });
-    } catch (error) {
-      console.error("Error  ", error);
+      toast.present(); // Muestra el toast
     }
-  }
+
+
+
 }

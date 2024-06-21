@@ -1,6 +1,22 @@
+<ion-content>
 
 <div class="search-container" >
   <ion-searchbar showCancelButton="focus" class="custom" placeholder="ubicación"></ion-searchbar>
 </div>
+<div class="boton">
+<ion-button  class= "centrado" (click)="obtenerdatos()">OBTENER TODOS LOS ESTACIONAMIENTOS</ion-button>
+</div>
 
-
+  <ion-list *ngIf="obtenerestacionamiento" >
+    <ion-item *ngFor="let documento of documentos">
+      <ion-label>
+        <h2>{{ documento.estacionamiento }}</h2>
+        <p>Dirección: {{ documento.direccion }}</p>
+        <p>Teléfono: {{ documento.telefono }}</p>
+        <p>Horario: {{ documento.horario }}</p>
+        <p>Tarifa: {{ documento.tarifa }}</p>
+        <p>Lugares disponibles: {{ documento.lugaresdisponibles }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

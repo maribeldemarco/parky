@@ -1,6 +1,7 @@
 <div class="contenedor">
   <img src="assets/perfil.png" class="img-profile" alt="Logo">
   
+  <ion-button expand="block" type="submit" (click)="logOut()">Cerrar sesión</ion-button>
   
   <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formulario">
     <div class="miCuenta-contenedor">
@@ -53,10 +54,12 @@
         <ion-label>
           <h3>Lugares disponibles</h3>
           <ion-input type="text" formControlName="lugaresdisponibles"></ion-input>
-        </ion-label>
-      </ion-item>
-    </div>
+          <ion-button expand="block" type="submit">Guardar Cambios</ion-button>
 
-  <ion-button expand="block" type="submit">Guardar Cambios</ion-button>
+        </ion-label>
+
+      </ion-item>
+
+    </div>
 
 </form>

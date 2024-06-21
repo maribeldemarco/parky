@@ -50,4 +50,9 @@ export class Tab8Page implements OnInit {
     this.database.onSubmit(this.formLogin, this.uid)
   }
 
+  logOut() {this.authService.logOut();
+    this.router.navigate(['/login']);
+  }
+
+
 }

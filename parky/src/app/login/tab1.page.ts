@@ -65,5 +65,9 @@ export class Tab1Page {
     toast.present(); // Muestra el toast
   }
 
+  VolverAtras() {
+    this.router.navigate(['/user']);
+  }
+
 
 }
