@@ -78,7 +78,7 @@ export class Tab2Page {
       message = 'La contraseña debe tener mínimo 6 caracteres.';
     }
     else {
-      message = 'Error desconocido: ';
+      message = 'Error en el resgistro, verifique los datos: ';
     }
 
     const toast = await this.toastController.create({
