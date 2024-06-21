@@ -1,5 +1,10 @@
 <ion-content>
-
+  
+  <br><br>
+  
+<div class="ion-text-center">
+  <ion-button  class="margenboton"  (click)="VolverAtras()" >VOLVER ATRAS</ion-button>
+</div>
 <div class="search-container" >
   <ion-searchbar showCancelButton="focus" class="custom" placeholder="ubicación" (ionInput)="filterList($event)"></ion-searchbar>
 </div>
@@ -39,5 +44,7 @@
       </ion-label>
     </ion-item>
   </ion-list>
+
+
 
 </ion-content>

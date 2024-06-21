@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
@@ -12,7 +12,7 @@ export class Tab4Page implements OnInit {
   buscardatos=false;
   filteredDocumentos: any[] = [];
 
-  constructor() { }
+  constructor( public router:Router) { }
 
   ngOnInit() {
     this.obtenerDocumentosFirestore();
@@ -67,5 +67,7 @@ borrar(){
 
 }
 
-
+VolverAtras() {
+  this.router.navigate(['/user']);
+}
 }
