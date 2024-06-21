@@ -16,7 +16,7 @@ export class DatabaseService {
   async getData() {
     await this.getCurrentUser();
     const docSnap = await getDoc(
-      doc(db, 'Usuario', this.currentUserData['uid'])
+      doc(db, 'Usuarios', this.currentUserData['uid'])
     );
     if (docSnap.exists()) {
       return docSnap.data();
@@ -25,15 +25,14 @@ export class DatabaseService {
       return undefined;
     }
   }
-  async generateUser() {
+  async generateUser(nombre: string, apellido: string, celular: string) {
     await this.getCurrentUser();
     if (this.currentUserData) {
-      setDoc(doc(db, 'Usuario', this.currentUserData['uid']), {
-        Nombre: 'Pedro',
-        Apellido: 'Fernandez',
-        mail: this.currentUserData['email'],
-        birthdate: '14/10/1995',
-        Contraseña: 'probando',
+      setDoc(doc(db, 'Usuarios', this.currentUserData['uid']), {
+        Nombre: nombre,
+        Apellido: apellido,
+        Email: this.currentUserData['email'],
+        Celular: celular
       });
     }
   }
