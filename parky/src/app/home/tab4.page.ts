@@ -62,4 +62,10 @@ export class Tab4Page implements OnInit {
 
 }
 
+borrar(){
+  this.obtenerestacionamiento=false;
+
+}
+
+
 }
