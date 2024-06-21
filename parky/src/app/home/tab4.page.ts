@@ -9,6 +9,9 @@ import { getFirestore, collection, onSnapshot } from 'firebase/firestore';
 export class Tab4Page implements OnInit {
   documentos: any[] = [];
   obtenerestacionamiento=false;
+  buscardatos=false;
+  filteredDocumentos: any[] = [];
+
   constructor() { }
 
   ngOnInit() {
@@ -43,6 +46,20 @@ export class Tab4Page implements OnInit {
 
   }
 
+  filterList(event: any) {
+    const searchTerm = event.target.value;
+    if (searchTerm.trim() === '') {
+      this.buscardatos = false;
+      this.filteredDocumentos = []; // Deja la pantalla vacía
+    } else {
+    this.buscardatos=true;
+    const searchTerm = event.target.value.toLowerCase();
+    this.filteredDocumentos = this.documentos.filter(documento => {
+      return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
+             documento.direccion.toLowerCase().includes(searchTerm);
+          });
+  }
+
 }
 
-
+}
