@@ -1,7 +1,5 @@
-
 <ion-content [fullscreen]="true">
   <!-- Contenido aquí -->
-
 
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -9,28 +7,25 @@
     </ion-toolbar>
   </ion-header>
   <div class="contenedor">
+    <img src="assets/icon/logo.svg" alt="Logo" class="logoparky" />
+  </div>
 
-  <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
+  <div class="contenedor3">
+    <p class="fuente">Recuperar contraseña</p>
 
+    <p class="fuente2">
+      Por favor, ingresá tu email. Recibirás un link para reestablecer tu
+      contraseña.
+    </p>
 
-</div>
-
-<div class="contenedor3">
-      
-<p class="fuente">Recuperar contraseña</p>
-
-
-<p class="fuente2"> Por favor, ingresá tu email. Recibirás un link para reestablecer tu contraseña.</p>
-
-<input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
-<img (click)="recoverPassword()" src="assets/icon/enviar.svg" alt="Logo"  >
-
-<p class="fuente2" (click)="backToLogin()"> Regresar al inicio  </p>
-
-</div>
-
-
-
-
-
+    <input
+      [(ngModel)]="email"
+      class="input"
+      type="email"
+      placeholder="Correo electrónico"
+    />
+    <img class="recover" (click)="recoverPassword()" src="assets/icon/enviar.svg" alt="Logo" />
+    <br>
+    <p class="fuente2 back" (click)="backToLogin()">Regresar al inicio</p>
+  </div>
 </ion-content>

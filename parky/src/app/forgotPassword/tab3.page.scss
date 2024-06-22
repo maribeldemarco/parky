@@ -1,72 +1,87 @@
+.logoparky {
+  width: 142px;
+  height: 60px;
+  margin-top: 87px !important;
+  gap: 0px;
+  opacity: 0px;
+}
 
+.fuente {
+  //styleName: Subtitulos;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 600;
+  color: antiquewhite;
+  margin-top: 0px;
+  text-align: center; /* Centra el texto horizontalmente */
+}
 
+.fuente2 {
+  /* Estilos específicos solo para el segundo elemento */
+  font-size: 15px !important; /* Tamaño de fuente diferente */
+  font-weight: 200 !important;
+  color: antiquewhite;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+ion-content {
+  --background: linear-gradient(to bottom, #3f236a, #7c45d0) !important;
+}
 
+.input {
+  width: 250px;
+  height: 41px;
+  border-radius: 10px;
+  display: block !important;
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+  color: black;
+  text-align: center;
+}
 
-.logoparky {width: 142px;
-    height: 60px;
-    margin-top: 87px !important;
-    gap: 0px;
-    opacity: 0px;
-    
-    }
+.contenedor3 {
+  width: 284px;
+  height: 350px;
+  background-color: rgb(63, 35, 106);
+  height: 350px;
+  margin: auto;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border-radius: 10px;
+  margin-top: 40px;
+  padding-top: 50px; /* Ajusta según necesites */
+  padding-bottom: 20px;
+}
 
-    .fuente {
-        //styleName: Subtitulos;
-    font-family: Roboto;
-    font-size: 20px;
-    font-weight: 600;
-    color: antiquewhite;
-    margin-top: 0px;
-    text-align: center; /* Centra el texto horizontalmente */
-    }
+img {
+  margin: auto;
+  display: block;
+  margin-top: 25px;
+}
 
+.recover:active {
+  transform: scale(0.9);
+}
 
-    .fuente2 {
-        /* Estilos específicos solo para el segundo elemento */
-        font-size: 15px !important; /* Tamaño de fuente diferente */
-        font-weight: 200 !important;
-        color: antiquewhite;
-        margin-top: 15px;
-        margin-bottom: 15px;
-        text-align: center;
-        margin-left: 10px;
-        margin-right: 10px;
-        
-    }
-      ion-content {
-        --background: linear-gradient(to bottom, #3F236A, #7C45D0
-        ) !important;
-      }
+.recover, .back {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
 
-      .input {
-        width: 250px;
-        height: 41px;
-        border-radius: 10px;
-        display: block !important;
-        margin: auto;
-        margin-top: 20px;
-        background: white;
-        color: black;
+.back {
+  padding: 10px;
+  vertical-align: middle;
+  margin: auto;
+  width: fit-content;
+  background-color: rgb(63, 35, 103);
+  border-radius: 10px;
+  border-bottom: 1px solid #000000;
+}
 
-        }
-
-        
-
-        .contenedor3 { width: 284px;
-            height: 350px;
-            background-color: #3F236A;
-            height: 350px;
-            margin: auto;
-            border: 1px 0px 0px 0px;
-            opacity: 0px;
-            border-radius: 10px;
-            margin-top: 40px;
-            padding-top: 50px; /* Ajusta según necesites */
-            padding-bottom: 20px;            }
-
-            
-      img {margin: auto;
-        display: block;
-        margin-top: 25px;
-
-          } 
+.back:active {
+  transform: scale(0.9);
+}

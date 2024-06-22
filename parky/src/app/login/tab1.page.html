@@ -1,10 +1,7 @@
-<ion-header [translucent]="true">
-
-</ion-header>
+<ion-header [translucent]="true"> </ion-header>
 
 <ion-content [fullscreen]="true">
   <!-- Contenido aquí -->
-
 
   <ion-header collapse="condense">
     <ion-toolbar>
@@ -12,45 +9,56 @@
     </ion-toolbar>
   </ion-header>
   <div class="contenedor">
+    <img src="assets/icon/logo.svg" alt="Logo" class="logoparky" />
+    <p class="fuente">Bienvenido/a</p>
+  </div>
 
-  <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
-  <p class="fuente">Bienvenido/a</p>
+  <div class="contenedor">
+    <input
+      [(ngModel)]="email"
+      class="input centrado"
+      type="email"
+      placeholder="Correo electrónico"
+    />
 
+    <input
+      [(ngModel)]="password"
+      class="input centrado"
+      placeholder="Contraseña"
+      [type]="showPassword ? 'text' : 'password'"
+    />
 
-</div>
+    <ion-checkbox label-placement="end" class="fuente2"
+      >Recordar mis datos</ion-checkbox
+    >
 
-<div class="contenedor">
-      <input [(ngModel)]="email"  class="input" type="email" placeholder="Correo electrónico">
-
-      <input [(ngModel)]="password" class="input"  placeholder="Contraseña"  [type]="showPassword ? 'text' : 'password'" >
-
-      <ion-checkbox label-placement="end" class="fuente2">Recordar mis datos</ion-checkbox>
-
-     <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
+    <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
 
 
 -->
-<img src="assets/icon/iniciobtn.svg" alt="Logo" (click)="loginUser()">
-<h4 (click)="goToRecover()" class="fuente2">¿Te olvidaste la contraseña?</h4>
-<h4 (click)="register()" class="fuente2">¿No tenés cuenta? Registrate acá</h4>
+    <img class="login" src="assets/icon/iniciobtn.svg" alt="Logo" (click)="loginUser()" />
+    <h4 (click)="goToRecover()" class="fuente2">
+      ¿Te olvidaste la contraseña?
+    </h4>
+    <h4 (click)="register()" class="fuente2">
+      ¿No tenés cuenta? Registrate acá
+    </h4>
+  </div>
 
-</div>
+  <hr class="lineaseparadora" />
 
+  <div class="contenedor">
+    <p class="fuente">Inicio de sesión con</p>
 
-
-<hr class="lineaseparadora">
-
-<div class="contenedor">
-<p class="fuente">Inicio de sesión con</p>
-
-
- <img src="assets/icon/btn.svg" alt="Logo" (click)="loginGoogle()" >
-
-
-</div>
-<div>
-  <br>
-<h4 (click)="VolverAtras()" class="fuente2 centrado">VOLVER ATRAS</h4>
-</div>
-
+    <img
+      class="login"
+      src="assets/icon/btn.svg"
+      alt="Logo"
+      (click)="loginGoogle()"
+    />
+  </div>
+  <div>
+    <br />
+    <h4 (click)="VolverAtras()" class="fuente2 centrado back">VOLVER ATRAS</h4>
+  </div>
 </ion-content>

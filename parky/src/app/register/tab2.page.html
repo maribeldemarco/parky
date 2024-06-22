@@ -1,56 +1,40 @@
 <ion-content>
-<ion-header [translucent]="true">
+  <ion-header [translucent]="true"> </ion-header>
 
-</ion-header>
+  <ion-content [fullscreen]="true">
+    <!-- Contenido aquí -->
 
-<ion-content [fullscreen]="true">
-  <!-- Contenido aquí -->
+    <div class="contenedor">
+      <img src="assets/icon/logo.svg" alt="Logo" class="logoparky" />
+      <p class="fuente">Registrarse</p>
+    </div>
 
+    <div class="contenedor">
+      <input
+        [(ngModel)]="email"
+        class="input"
+        type="email"
+        placeholder="Correo electrónico"
+      />
 
+      <input
+        [(ngModel)]="password"
+        class="input"
+        placeholder="Contraseña"
+        [type]="showPassword ? 'text' : 'password'"
+      />
 
-  <div class="contenedor">
-
-  <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
-  <p class="fuente">Registrarse</p>
-
-
-</div>
-
-<div class="contenedor">
-      <input [(ngModel)]="email" class="input" type="email" placeholder="Correo electrónico">
-
-      <input [(ngModel)]="password"  class="input"  placeholder="Contraseña" [type]="showPassword ? 'text' : 'password'">
-
-
-
-     <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
+      <!-- <ion-button shape="round" size="large" color="tertiary">Iniciar sesion</ion-button>
 
 
 -->
-<img src="assets/icon/crearcuenta.svg" alt="Logo" (click)="register()" >
+      <img class="register" src="assets/icon/crearcuenta.svg" alt="Logo" (click)="register()" />
+    </div>
 
-
-
-</div>
-
-
-
-
-
- 
-
-
-<hr class="lineaseparadora">
-
-<div class="contenedor">
-  <h4 class="fuente2" (click)="backToLogin()"> Regresar al inicio  </h4>
-</div>
-
-
-
-
-
-
-
+    <hr class="lineaseparadora" />
+    <br>
+    <div class="contenedor">
+      <h4 class="fuente2 back" (click)="backToLogin()">Regresar al inicio</h4>
+    </div>
+  </ion-content>
 </ion-content>
-

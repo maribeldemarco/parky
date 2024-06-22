@@ -1,20 +1,20 @@
-
-
-.contenedor, .centrado {
-    width: 100%;
-    text-align: center; /* Esto centra el contenido dentro del div */
+.contenedor,
+.centrado {
+  width: 100%;
+  text-align: center; /* Esto centra el contenido dentro del div */
 }
 
-h4.centrado{font-weight: 700 !important;
+h4.centrado {
+  font-weight: 700 !important;
 }
 
-.logoparky {width: 142px;
-    height: 60px;
-    margin-top: 87px !important;
-    gap: 0px;
-    opacity: 0px;
-    
-    }
+.logoparky {
+  width: 142px;
+  height: 60px;
+  margin-top: 87px !important;
+  gap: 0px;
+  opacity: 0px;
+}
 
 .fuente {
   font-family: Roboto;
@@ -22,53 +22,77 @@ h4.centrado{font-weight: 700 !important;
   font-weight: 600;
   line-height: 23.44px;
   color: #ffffff;
-
 }
-
 
 .fuente2 {
   /* Estilos específicos solo para el segundo elemento */
   font-size: 15px !important; /* Tamaño de fuente diferente */
   font-weight: 200 !important;
   color: white;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  cursor: pointer;
+  margin: 15px auto;
+  width: fit-content;
 }
-      ion-content {
-        --background: linear-gradient(to bottom, #3F236A, #7C45D0
-        ) !important;
-      }
+ion-content {
+  --background: linear-gradient(to bottom, #3f236a, #7c45d0) !important;
+}
 
-      .input  {
-        width: 298px;
-        height: 41px;
-        display: block !important;
-        margin: auto;
-        margin-top: 20px;
-        background: white;
-        color: black;
-        border-radius: 10px;
-        }
-      
-       
-        
-        ion-button {
-            display: block; /* Hace que el botón se muestre como un bloque */
-            margin:  auto; 
-            height: 38px;
-        margin-top: 20px;
-        opacity: 0px;
-width: 200px; 
-        }
+.input {
+  width: 298px;
+  height: 41px;
+  display: block !important;
+  margin: auto;
+  margin-top: 20px;
+  background: white;
+  color: black;
+  border-radius: 10px;
+}
 
-        .lineaseparadora { width: 284px;
-            height: 0px;
-            color: white;
-            margin: auto;
-            border: 1px 0px 0px 0px;
-            opacity: 0px;
-            border: 1px solid #FFFFFF;
-            margin-top: 40px;
-            }
-      img {margin: auto;
-    display: block;}
+ion-button {
+  display: block; /* Hace que el botón se muestre como un bloque */
+  margin: auto;
+  height: 38px;
+  margin-top: 20px;
+  opacity: 0px;
+  width: 200px;
+}
+
+.lineaseparadora {
+  width: 284px;
+  height: 0px;
+  color: white;
+  margin: auto;
+  border: 1px 0px 0px 0px;
+  opacity: 0px;
+  border: 1px solid #ffffff;
+  margin-top: 40px;
+}
+
+img {
+  margin: auto;
+  display: block;
+}
+
+.login:active {
+  transform: scale(0.9);
+}
+
+.login,
+.back {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.back {
+  padding: 10px;
+  vertical-align: middle;
+  margin: auto;
+  width: fit-content;
+  background-color: #7c45d0;
+  border-radius: 10px;
+  border-bottom: 1px solid #000000;
+}
+
+.back:active {
+  transform: scale(0.9);
+}
