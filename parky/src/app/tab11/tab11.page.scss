@@ -1,0 +1,77 @@
+.formulario-container {
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 50px;
+
+}
+.formulario-container textarea{ resize: none;} /* Evita el redimensionamiento */
+
+  
+  .formulario-container form {
+    display: grid;
+    grid-gap: 20px;
+  }
+  
+  .formulario-container h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .formulario-container label {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .formulario-container input[type="text"],
+  .formulario-container input[type="email"],
+  .formulario-container textarea {
+    width: calc(100% - 20px);
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #333;
+    outline: none;
+  }
+  
+  .formulario-container input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  .formulario-container button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .formulario-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  
+  .contenedor {
+    width: 100%;
+    text-align: center; /* Esto centra el contenido dentro del div */
+}
+
+  .logoparky {width: 142px;
+    height: 60px;
+    margin-top: 87px !important;
+    gap: 0px;
+    opacity: 0px;
+    
+    }
+
+  ion-content {
+    --background: linear-gradient(to bottom, #3F236A, #7C45D0
+    ) !important;
+  }

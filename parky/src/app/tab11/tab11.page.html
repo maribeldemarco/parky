@@ -1,0 +1,36 @@
+<ion-content>
+  
+  <div class="contenedor">
+  <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
+
+  <div class="formulario-container">
+  <h1>Formulario de Contacto</h1>
+
+  <form #contactForm="ngForm"  (ngSubmit)="onSubmit(contactForm)" action="https://formspree.io/f/xdknngor" method="POST">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" name="apellido" [(ngModel)]="apellido" required>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" [(ngModel)]="email" required>
+
+    <label for="consulta">Consulta:</label>
+    <textarea id="consulta" name="consulta" [(ngModel)]="consulta" required></textarea>
+
+    <label>
+      <input type="checkbox" name="soyCliente" [(ngModel)]="soyCliente">
+      Soy cliente
+    </label>
+
+    <label>
+      <input type="checkbox" name="soyDueno" [(ngModel)]="soyDueno">
+      Soy dueño de estacionamiento
+    </label>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+</div>
+</ion-content>

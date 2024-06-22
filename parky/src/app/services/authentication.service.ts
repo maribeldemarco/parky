@@ -8,6 +8,7 @@ import { environment } from '../../environments/environment';
   providedIn: 'root'
 })
 export class AuthenticationService {
+  tabnuevo: boolean = false;
 
   private auth = getAuth();
   private provider = new GoogleAuthProvider();
@@ -28,6 +29,16 @@ export class AuthenticationService {
     return signOut(this.auth);
   }
 
+
+
+
+  setTabNuevo(value: boolean) {
+    this.tabnuevo = value;
+  }
+
+  getTabNuevo() {
+    return this.tabnuevo;
+  }
   async signUp(email: string, password: string) {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }

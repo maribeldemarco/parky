@@ -40,8 +40,12 @@ const routes: Routes = [
   {
     path: 'home-duenio',
     loadChildren: () => import('./home-duenio/tab10.module').then( m => m.Tab10PageModule)
+  },  {
+    path: 'tab11',
+    loadChildren: () => import('./tab11/tab11.module').then( m => m.Tab11PageModule)
   },
 
+  
 
 
 
