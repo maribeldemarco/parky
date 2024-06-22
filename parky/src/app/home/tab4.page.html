@@ -7,6 +7,12 @@
 <ion-button   class="ion-justify-content-center"(click)="obtenerdatos()">OBTENER TODOS LOS ESTACIONAMIENTOS</ion-button>
 </div>
 
+<div class="ion-text-center">
+
+  <ion-button   class="ion-justify-content-center"(click)="borrar()">BORRAR TODOS LOS ESTACIONAMIENTOS</ion-button>
+
+</div>
+
   <ion-list *ngIf="obtenerestacionamiento" >
     <ion-item *ngFor="let documento of documentos">
       <ion-label>

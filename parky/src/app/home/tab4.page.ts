@@ -14,6 +14,9 @@ export class Tab4Page implements OnInit {
   obtenerestacionamiento = false;
   geocoder: any;
   map: any;
+buscardatos: any;
+filteredDocumentos: any;
+  router: any;
 
   constructor() { }
 
@@ -33,7 +36,7 @@ export class Tab4Page implements OnInit {
 
     this.geocoder = new Geocoder({
       geocoder: new geocoders.Nominatim(),
-      position: 'topleft',
+      position: 'topright',
     }).addTo(this.map);
 
     if (this.geocoder) {
@@ -139,4 +142,27 @@ export class Tab4Page implements OnInit {
 
     return lat >= minLat && lat <= maxLat && lng >= minLng && lng <= maxLng;
   }
+
+  filterList(event: any) {
+    const searchTerm = event.target.value;
+    if (searchTerm.trim() === '') {
+      this.buscardatos = false;
+      this.filteredDocumentos = []; // Deja la pantalla vacía
+    } else {
+    this.buscardatos=true;
+    const searchTerm = event.target.value.toLowerCase();
+    this.filteredDocumentos = this.documentos.filter(documento => {
+      return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
+             documento.direccion.toLowerCase().includes(searchTerm);
+          });
+  }
+
+}
+
+borrar(){
+  this.obtenerestacionamiento=false;
+
+}
+
+
 }
