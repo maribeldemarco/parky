@@ -4,8 +4,6 @@ import * as L from 'leaflet';
 import 'leaflet-control-geocoder';
 import { Geocoder, geocoders } from 'leaflet-control-geocoder';
 
-L.Icon.Default.imagePath = 'assets/images/leaflet/';
-
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
