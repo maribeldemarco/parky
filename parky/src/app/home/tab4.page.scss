@@ -1,6 +1,5 @@
 ion-content {
-  --background: linear-gradient(to bottom, #3F236A, #7C45D0
-  ) !important;
+  --background: linear-gradient(to bottom, #3f236a, #7c45d0) !important;
 }
 
 .search-container {
@@ -10,34 +9,58 @@ ion-content {
 }
 
 .mapa {
-
-    margin-top: 30px;
-    margin-left: 15px;
-    margin-right: 15px;
-    margin-bottom: 30px;
-    
+  margin-top: 30px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 30px;
 }
 
 /* Scoped components require higher specificity to customize */
 ion-searchbar.custom {
-    --background: white;
-    --color: black;
-    --placeholder-color: black;
-    --icon-color: black;
-    --clear-button-color: black;
+  --background: white;
+  --color: black;
+  --placeholder-color: black;
+  --icon-color: black;
+  --clear-button-color: black;
 
-    --border-radius: 4px;
-  }
-  
-  ion-searchbar.ios.custom {
-    --cancel-button-color: black;
-  }
-  
-  ion-searchbar.md.custom {
-    --cancel-button-color: #fff;
-  }
+  --border-radius: 4px;
+}
 
- // En SCSS
+ion-searchbar.ios.custom {
+  --cancel-button-color: black;
+}
+
+ion-searchbar.md.custom {
+  --cancel-button-color: #fff;
+}
+
+// En SCSS
 /* styles.scss o styles.css */
-.fuentedos centrado {margin: auto;}
-.margenboton{margin-top: 50px !important;}
+.fuentedos centrado {
+  margin: auto;
+}
+
+.margenboton {
+  margin-top: 50px !important;
+}
+
+ion-toolbar {
+  padding: 0;
+  margin: auto;
+  width: 98%;
+  --background: linear-gradient(to bottom, rgb(65, 36, 110), rgb(69,39,116)) !important;
+}
+
+.back { 
+  width: fit-content;
+  border-radius: 10px;
+  background-color: #4b2b7c;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.2s;
+  border-bottom: 3px solid #000000;
+}
+
+.back:active {
+  transform: scale(0.9);
+}

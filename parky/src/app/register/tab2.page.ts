@@ -5,49 +5,39 @@ import { ToastController } from '@ionic/angular';
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
-  styleUrls: ['tab2.page.scss']
+  styleUrls: ['tab2.page.scss'],
 })
 export class Tab2Page {
-  
   showPassword = false;
 
   password: string = '';
   email: string = '';
-  tipoerror:any='';
+  tipoerror: any = '';
   constructor(
     public auth: AuthenticationService,
-    public router: Router,private toastController: ToastController
-  ) { }
-
-  
- 
-  logout() {
-    this.auth.logOut()
-    this.router.navigate(['/login'])
-  }
+    public router: Router,
+    private toastController: ToastController
+  ) {}
   async register() {
-     this.auth.signUp(this.email, this.password).then((userCredential) => {
+    this.auth
+      .signUp(this.email, this.password)
+      .then((userCredential) => {
         this.presentToast();
-      
 
         setTimeout(() => {
-          this.router.navigate(['/tabs/tab1']);
+          this.router.navigate(['login']);
         }, 3000);
-
       })
-    
 
       .catch((error: any) => {
         console.log(error.code);
         this.tipoerror = error.code;
-      this.ErrorToast(this.tipoerror);
+        this.ErrorToast(this.tipoerror);
       });
-      
-
   }
 
   backToLogin() {
-    this.router.navigate(['/tabs/tab1'])
+    this.router.navigate(['login']);
   }
 
   async presentToast() {
@@ -60,25 +50,22 @@ export class Tab2Page {
         {
           icon: 'close',
           role: 'cancel', // Botón de cerrar el toast
-        }
-      ]
+        },
+      ],
     });
     toast.present(); // Muestra el toast
   }
 
-
-  async ErrorToast(tipoerror:any) {
+  async ErrorToast(tipoerror: any) {
     let message = 'Registro fallido';
 
     if (tipoerror === 'auth/invalid-email') {
       message = 'Correo electrónico inválido.';
     } else if (tipoerror === 'auth/email-already-in-use') {
       message = 'El correo electrónico ya está registrado.';
-    }
-    else if (tipoerror === 'auth/weak-password') {
+    } else if (tipoerror === 'auth/weak-password') {
       message = 'La contraseña debe tener mínimo 6 caracteres.';
-    }
-    else {
+    } else {
       message = 'Error en el resgistro, verifique los datos: ';
     }
 
@@ -91,11 +78,9 @@ export class Tab2Page {
         {
           icon: 'close',
           role: 'cancel', // Botón de cerrar el toast
-        }
-      ]
+        },
+      ],
     });
     toast.present(); // Muestra el toast
   }
-  
-
 }

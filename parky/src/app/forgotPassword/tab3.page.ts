@@ -24,7 +24,7 @@ export class Tab3Page {
       await sendPasswordResetEmail(auth, this.email);
       await this.presentToast('Contraseña recuperada', 'Link de recuperación enviado a su correo electrónico');
       setTimeout(() => {
-        this.router.navigate(['/tabs/tab1']); // 
+        this.router.navigate(['login']); // 
       }, 2000);
     } catch (error: any) {
       if ( error.code === 'auth/user-not-found') {
@@ -55,6 +55,6 @@ export class Tab3Page {
   }
 
   backToLogin() {
-    this.router.navigate(['/tabs/tab1']);
+    this.router.navigate(['login']);
   }
 }

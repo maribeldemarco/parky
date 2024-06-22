@@ -1,57 +1,63 @@
-<!-- MI CUENTA -->
+<ion-content>
+  <br /><br />
+  
+  <ion-toolbar class="backBar">
+    <ion-buttons class="back" slot="start" size="large">
+      <ion-button (click)="VolverAtras()">
+        <ion-icon name="arrow-back-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 
-<div class="contenedor">
-  <img class="img-profile" src="assets/perfil.png" alt="">
+  <!-- MI CUENTA -->
 
-  <div class="miCuenta-contenedor">
+  <div class="contenedor">
+    <img class="img-profile" src="assets/perfil.png" alt="" />
 
-    <ion-toolbar>
+    <div class="miCuenta-contenedor">
+      <ion-toolbar>
         <ion-title class="ion-text-start">Mi cuenta</ion-title>
         <ion-buttons slot="end">
           <ion-button>
             <ion-icon slot="icon-only" name="create-outline"></ion-icon>
           </ion-button>
         </ion-buttons>
-    </ion-toolbar>
+      </ion-toolbar>
 
-
-    <ion-item>
+      <ion-item>
         <ion-label>
           <h3>Nombre</h3>
           <p>Fulanito</p>
         </ion-label>
-    </ion-item>
+      </ion-item>
 
-    <ion-item>
+      <ion-item>
         <ion-label>
           <h3>Apellido</h3>
           <p>Martínez</p>
         </ion-label>
-    </ion-item>
+      </ion-item>
 
-    <ion-item>
+      <ion-item>
         <ion-label>
           <h3>Correo Electrónico</h3>
           <p>fulanitoarrobagmail.com</p>
         </ion-label>
-    </ion-item>
+      </ion-item>
 
-    <ion-item>
+      <ion-item>
         <ion-label>
           <h3>Fecha de Nacimiento</h3>
           <p>25/07/1995</p>
         </ion-label>
-    </ion-item>
+      </ion-item>
 
-    <ion-item>
+      <ion-item>
         <ion-label>
           <h3>Contraseña actual</h3>
           <p>********</p>
         </ion-label>
-    </ion-item>
-</div>
-</div>
-
-
-
-
+      </ion-item>
+    </div>
+  </div>
+</ion-content>

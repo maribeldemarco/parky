@@ -43,10 +43,10 @@ export class Tab1Page {
     });
   }
   register() {
-    this.router.navigate(['/tabs/tab2'])
+    this.router.navigate(['crearcuenta'])
   }
   goToRecover() {
-    this.router.navigate(['tabs/tab3'])
+    this.router.navigate(['recuperarclave'])
   }
 
 
