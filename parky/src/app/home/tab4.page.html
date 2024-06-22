@@ -1,6 +1,8 @@
 <ion-content>
 
-
+  <div class="lupita" >
+    <ion-searchbar showCancelButton="focus" class="custom" placeholder="ubicación" (ionInput)="filterList($event)"></ion-searchbar>
+  </div>
 <div class="search-container" id="map" style="height: 400px;"></div>
 
 <div class="ion-text-center">

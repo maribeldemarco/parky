@@ -34,10 +34,10 @@ filteredDocumentos: any;
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
-    this.geocoder = new Geocoder({
+   /* this.geocoder = new Geocoder({
       geocoder: new geocoders.Nominatim(),
       position: 'topright',
-    }).addTo(this.map);
+    }).addTo(this.map);*/
 
     if (this.geocoder) {
       this.geocoder.on('markgeocode', (event: { geocode: { center: any; }; }) => {
@@ -144,20 +144,19 @@ filteredDocumentos: any;
   }
 
   filterList(event: any) {
-    const searchTerm = event.target.value;
+    const searchTerm = event.target.value.toLowerCase();
     if (searchTerm.trim() === '') {
       this.buscardatos = false;
-      this.filteredDocumentos = []; // Deja la pantalla vacía
+      this.filteredDocumentos = []; // Vaciar el array de documentos filtrados
     } else {
-    this.buscardatos=true;
-    const searchTerm = event.target.value.toLowerCase();
-    this.filteredDocumentos = this.documentos.filter(documento => {
-      return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
-             documento.direccion.toLowerCase().includes(searchTerm);
-          });
+      this.buscardatos = true;
+      this.filteredDocumentos = this.documentos.filter(documento => {
+        return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
+               documento.direccion.toLowerCase().includes(searchTerm);
+      });
+    }
   }
-
-}
+  
 
 borrar(){
   this.obtenerestacionamiento=false;
