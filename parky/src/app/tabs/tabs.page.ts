@@ -25,7 +25,7 @@ export class TabsPage {
   }
 
   backToHome() {
-    this.router.navigate(['/tabs/tab4']);
+    this.router.navigate(['/user']);
   }
 
   cambioUsuario() {
