@@ -4,6 +4,8 @@ import * as L from 'leaflet';
 import 'leaflet-control-geocoder';
 import { Geocoder, geocoders } from 'leaflet-control-geocoder';
 
+L.Icon.Default.imagePath = 'assets/images/leaflet/';
+
 @Component({
   selector: 'app-tab4',
   templateUrl: './tab4.page.html',
@@ -14,8 +16,8 @@ export class Tab4Page implements OnInit {
   obtenerestacionamiento = false;
   geocoder: any;
   map: any;
-buscardatos: any;
-filteredDocumentos: any;
+  buscardatos= false;
+  filteredDocumentos: any[] = [];
   router: any;
 
   constructor() { }
@@ -143,20 +145,25 @@ filteredDocumentos: any;
     return lat >= minLat && lat <= maxLat && lng >= minLng && lng <= maxLng;
   }
 
-  filterList(event: any) {
-    const searchTerm = event.target.value.toLowerCase();
-    if (searchTerm.trim() === '') {
-      this.buscardatos = false;
-      this.filteredDocumentos = []; // Vaciar el array de documentos filtrados
-    } else {
-      this.buscardatos = true;
-      this.filteredDocumentos = this.documentos.filter(documento => {
-        return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
-               documento.direccion.toLowerCase().includes(searchTerm);
-      });
-    }
+  //LUPA
+
+filterList(event: any) {
+  const searchTerm = event.target.value.toLowerCase(); // Obtener el valor del input y convertir a minúsculas
+  if (searchTerm.trim() === '') {
+    this.buscardatos = false;
+    this.filteredDocumentos = []; // Vaciar la lista de documentos filtrados si no hay término de búsqueda
+  } else {
+    this.buscardatos = true;
+    this.filteredDocumentos = this.documentos.filter(documento => {
+      // Filtrar documentos basados en estacionamiento o dirección que contengan searchTerm
+      return documento.estacionamiento.toLowerCase().includes(searchTerm) ||
+             documento.direccion.toLowerCase().includes(searchTerm);
+
+             
+    });    
   }
-  
+}
+
 
 borrar(){
   this.obtenerestacionamiento=false;
