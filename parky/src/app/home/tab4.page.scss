@@ -59,8 +59,22 @@ ion-toolbar {
   cursor: pointer;
   transition: transform 0.2s;
   border-bottom: 3px solid #000000;
+  border-style: none;
 }
 
 .back:active {
   transform: scale(0.9);
+}
+
+//BOTONES 
+
+.ion-justify-content-center {
+  padding: 5px;
+  margin: 20px;
+  border-radius: 10px;
+  background: #3F236A;
+  font-size: 15px !important;
+  font-weight: 200 !important;
+  color: white;
+  text-transform: none;
 }

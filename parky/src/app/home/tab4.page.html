@@ -23,14 +23,10 @@
     ></ion-searchbar>
   </div>
   <div class="ion-text-center">
-    <ion-button class="ion-justify-content-center" (click)="obtenerdatos()"
-      >OBTENER TODOS LOS ESTACIONAMIENTOS</ion-button
-    >
-  </div>
-  <div class="ion-text-center">
-    <ion-button class="ion-justify-content-center" (click)="borrar()"
-      >BORRAR TODOS LOS ESTACIONAMIENTOS</ion-button
-    >
+    <ion-button class="ion-justify-content-center" fill="clear" (click)="obtenerdatos()"
+      >Obtener todos los estacionamientos</ion-button>
+      <ion-button class="ion-justify-content-center" fill="clear" (click)="borrar()"
+      >Borrar todos los estacionamientos</ion-button>
   </div>
   <ion-list *ngIf="obtenerestacionamiento && !buscardatos">
     <ion-item *ngFor="let documento of documentos">
