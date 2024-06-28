@@ -47,7 +47,13 @@ export class Tab8Page implements OnInit {
   }
 
   onSubmit() {
-    this.database.onSubmit(this.formLogin, this.uid)
+    this.database.onSubmit(this.formLogin, this.uid);
+
+    this.siguiente();
+  }
+
+  siguiente() {
+    this.router.navigate(['/tabs/tab7']);
   }
 
   logOut() {this.authService.logOut();

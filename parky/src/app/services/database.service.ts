@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { addDoc, collection, doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getFirestore, setDoc, updateDoc } from 'firebase/firestore';
 import { FormGroup } from '@angular/forms';
 import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
@@ -29,12 +29,32 @@ export class DatabaseService {
         console.error('Error ', error);
       }
     }
+
+    
+
+    
   
     async onSubmit(formLogin: FormGroup<any>, uid: string) {
       if (formLogin.valid) {
         try {
           const userDocRef = doc(db, `profile/${uid}`);
           await setDoc(userDocRef, formLogin.value);
+          
+          this.presentToast();
+          console.log('Perfil actualizado correctamente');
+          this.loadProfile(formLogin, uid);
+
+        } catch (error) {
+          console.error('Error :', error);
+        }
+      }
+    }
+
+    async actualizar(formLogin: FormGroup<any>, uid: string) {
+      if (formLogin.valid) {
+        try {
+          const userDocRef = doc(db, `profile/${uid}`);
+          await updateDoc(userDocRef, formLogin.value);
           
           this.presentToast();
           console.log('Perfil actualizado correctamente');
