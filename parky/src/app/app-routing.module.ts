@@ -39,20 +39,15 @@ const routes: Routes = [
       import('./home/tab4.module').then((m) => m.Tab4PageModule),
   },
   {
-    path: 'profile',
+    path: 'registroPropietario',
     loadChildren: () =>
-      import('./profile/tab5.module').then((m) => m.Tab5PageModule),
+      import('./registro1estacionamiento/tab6.module').then((m) => m.Tab6PageModule),
   },
   {
-    path: 'home-duenio',
+    path: 'registroEstacionamiento',
     loadChildren: () =>
-      import('./home-duenio/tab10.module').then((m) => m.Tab10PageModule),
-  },
-  {
-    path: 'tab11',
-    loadChildren: () =>
-      import('./tab11/tab11.module').then((m) => m.Tab11PageModule),
-  },
+      import('./registro2estacionamiento/tab7.module').then((m) => m.Tab7PageModule),
+  }
 ];
 
 // Otras rutas fuera del sistema de tabs aquí

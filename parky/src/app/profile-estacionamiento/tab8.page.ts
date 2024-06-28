@@ -32,7 +32,7 @@ export class Tab8Page implements OnInit {
     this.authService.getCurrentUser().then((user: any) => {
       if (user) {
         this.uid = user.uid;
-        this.loadProfile();
+        this.loadEstacionamientoProfile();
       } else {
         this.router.navigate(['/login']);
       }
@@ -42,15 +42,16 @@ export class Tab8Page implements OnInit {
     });
   }
 
-  loadProfile() {
-    this.database.loadProfile(this.formLogin, this.uid)
+  loadEstacionamientoProfile() {
+    this.database.loadEstacionamientoProfile(this.formLogin, this.uid)
   }
 
   onSubmit() {
-    this.database.onSubmit(this.formLogin, this.uid)
+    this.database.onSubmitEstacionamiento(this.formLogin, this.uid)
   }
 
   logOut() {this.authService.logOut();
+    this.authService.logOut();
     this.router.navigate(['/login']);
   }
 

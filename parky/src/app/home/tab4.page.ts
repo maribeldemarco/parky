@@ -24,7 +24,7 @@ export class Tab4Page implements OnInit {
   async obtenerDocumentosFirestore() {
     const db = getFirestore(); // Obtén la instancia de Firestore
     try {
-      const unsub = onSnapshot(collection(db, 'profile'), (querySnapshot) => {
+      const unsub = onSnapshot(collection(db, 'Estacionamientos'), (querySnapshot) => {
         this.documentos = []; // Vaciamos el array para evitar duplicados
 
         querySnapshot.forEach((doc) => {

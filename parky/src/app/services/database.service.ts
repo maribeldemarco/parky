@@ -16,9 +16,23 @@ export class DatabaseService {
 
   constructor(private auth: AuthenticationService, private toastController: ToastController) { }
 
-    async loadProfile(formLogin: FormGroup<any>, uid: string) {
+    async loadEstacionamientoProfile(formLogin: FormGroup<any>, uid: string) {
       try {
-        const userDocRef = doc(db, `profile/${uid}`);
+        const userDocRef = doc(db, `Estacionamiento/${uid}`);
+        const userDoc = await getDoc(userDocRef);
+        if (userDoc.exists()) {
+          formLogin.patchValue(userDoc.data() as any);
+        } else {
+          console.error('Document does not exist');
+        }
+      } catch (error) {
+        console.error('Error ', error);
+      }
+    }
+
+    async loadUserProfile(formLogin: FormGroup<any>, uid: string) {
+      try {
+        const userDocRef = doc(db, `Propietarios/${uid}`);
         const userDoc = await getDoc(userDocRef);
         if (userDoc.exists()) {
           formLogin.patchValue(userDoc.data() as any);
@@ -30,15 +44,31 @@ export class DatabaseService {
       }
     }
   
-    async onSubmit(formLogin: FormGroup<any>, uid: string) {
+    async onSubmitEstacionamiento(formLogin: FormGroup<any>, uid: string) {
       if (formLogin.valid) {
         try {
-          const userDocRef = doc(db, `profile/${uid}`);
+          const userDocRef = doc(db, `Estacionamientos/${uid}`);
           await setDoc(userDocRef, formLogin.value);
           
           this.presentToast();
           console.log('Perfil actualizado correctamente');
-          this.loadProfile(formLogin, uid);
+          this.loadEstacionamientoProfile(formLogin, uid);
+
+        } catch (error) {
+          console.error('Error :', error);
+        }
+      }
+    }
+
+    async onSubmitUser(formLogin: FormGroup<any>, uid: string) {
+      if (formLogin.valid) {
+        try {
+          const userDocRef = doc(db, `Propietarios/${uid}`);
+          await setDoc(userDocRef, formLogin.value);
+          
+          this.presentToast();
+          console.log('Perfil actualizado correctamente');
+          this.loadEstacionamientoProfile(formLogin, uid);
 
         } catch (error) {
           console.error('Error :', error);

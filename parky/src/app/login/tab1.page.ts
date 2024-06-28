@@ -23,7 +23,7 @@ export class Tab1Page {
     this.auth.logIn(this.email, this.password).then((userCredential) => {
     
       this.auth.setTabNuevo(true); // Establecer tabnuevo en true
-      this.router.navigate(['/tabs/tab8'])
+      this.router.navigate(['/tabs/tab10'])
     
     }).catch((error: any) => {
       console.log(error.code);
@@ -36,7 +36,7 @@ export class Tab1Page {
   }
   async loginGoogle() {
     this.auth.logInGoogle().then((userCredential) => {
-      this.router.navigate(['/tabs/tab8'])
+      this.router.navigate(['/tabs/tab10'])
     }).catch((error) => {
       console.log(error.code);
       alert('Google Error.');

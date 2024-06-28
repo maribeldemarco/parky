@@ -25,7 +25,7 @@ export class Tab2Page {
         this.presentToast();
 
         setTimeout(() => {
-          this.router.navigate(['login']);
+          this.router.navigate(['registroPropietario']);
         }, 3000);
       })
 
