@@ -19,12 +19,10 @@ export class Tab8Page implements OnInit {
     private database: DatabaseService
   ) {
     this.formLogin = new FormGroup({
-      estacionamiento: new FormControl(''),
-      direccion: new FormControl(''),
+      nombre: new FormControl(''),
+      apellido: new FormControl(''),
+      correo: new FormControl(''),
       telefono: new FormControl(''),
-      horario: new FormControl(''),
-      tarifa: new FormControl(''),
-      lugaresdisponibles: new FormControl(''),
     });
   }
 
@@ -32,7 +30,7 @@ export class Tab8Page implements OnInit {
     this.authService.getCurrentUser().then((user: any) => {
       if (user) {
         this.uid = user.uid;
-        this.loadEstacionamientoProfile();
+        this.loadUserProfile();
       } else {
         this.router.navigate(['/login']);
       }
@@ -42,18 +40,12 @@ export class Tab8Page implements OnInit {
     });
   }
 
-  loadEstacionamientoProfile() {
-    this.database.loadEstacionamientoProfile(this.formLogin, this.uid)
+  loadUserProfile() {
+    this.database.load(this.formLogin, this.uid, 'Propietarios')
   }
 
   onSubmit() {
-    this.database.onSubmitEstacionamiento(this.formLogin, this.uid)
+    this.database.onSubmit(this.formLogin, this.uid, 'Propietarios');
   }
-
-  logOut() {this.authService.logOut();
-    this.authService.logOut();
-    this.router.navigate(['/login']);
-  }
-
 
 }

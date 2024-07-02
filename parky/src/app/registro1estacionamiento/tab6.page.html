@@ -6,37 +6,38 @@
     <ion-toolbar>
       <ion-title class="ion-text-start">Soy dueño/a de un estacionamiento</ion-title>
     </ion-toolbar>
-
-    <ion-item>
-      <ion-label>
-        Completa tus datos
-      </ion-label> 
-    </ion-item>
+      <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formulario">
+        <div class="miCuenta-contenedor">
     
-    <ion-item>
-      <ion-label position="stacked">Nombre</ion-label>
-      <ion-input type="text" placeholder="Ingrese su nombre"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Apellido</ion-label>
-      <ion-input type="text" placeholder="Ingrese su apellido"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Correo Electrónico</ion-label>
-      <ion-input type="email" placeholder="Ingrese su correo electrónico"></ion-input>
-    </ion-item>
-
-    <ion-item>
-      <ion-label position="stacked">Celular</ion-label>
-      <ion-input type="tel" placeholder="Ingrese su número de celular"></ion-input>
-    </ion-item>
-
-  </div>
-
-  <ion-button fill="clear" (click)="continuarRegistro()" class="btn-siguiente">Siguiente</ion-button>
-</div>
+          <ion-toolbar>
+            <ion-title class="ion-text-start">Datos Personales</ion-title>
+          </ion-toolbar>
+    
+          <ion-item>
+            <ion-label position="stacked">Nombre</ion-label>
+            <ion-input type="text" placeholder="Nombre" formControlName="nombre"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="stacked">Apellido</ion-label>
+            <ion-input type="text" placeholder="Apellido" formControlName="apellido"></ion-input>
+          </ion-item>
+    
+          <ion-item>
+            <ion-label position="stacked">Correo Electronico</ion-label>
+            <ion-input type="text" placeholder="Correo Electronico" formControlName="correo"></ion-input>
+          </ion-item>
+      
+          <ion-item>
+            <ion-label position="stacked">Telefono</ion-label>
+            <ion-input type="text" placeholder="Telefono" formControlName="telefono"></ion-input>
+          </ion-item>
+    
+        </div>
+    
+        <ion-button fill="clear" type="submit" class="btn-guardar">Continuar</ion-button>
+    
+    </form>
 
 
 

@@ -29,16 +29,6 @@ export class AuthenticationService {
     return signOut(this.auth);
   }
 
-
-
-
-  setTabNuevo(value: boolean) {
-    this.tabnuevo = value;
-  }
-
-  getTabNuevo() {
-    return this.tabnuevo;
-  }
   async signUp(email: string, password: string) {
     return createUserWithEmailAndPassword(this.auth, email, password);
   }

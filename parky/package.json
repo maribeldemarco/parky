@@ -24,10 +24,12 @@
     "@angular/router": "^17.0.2",
     "@capacitor/core": "6.0.0",
     "@ionic/angular": "^8.0.0",
+    "@types/ol": "^7.0.0",
     "firebase": "^10.12.1",
     "ionicons": "^7.0.0",
     "leaflet": "^1.9.4",
     "leaflet-control-geocoder": "^2.4.0",
+    "ol": "^9.2.4",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.14.2"

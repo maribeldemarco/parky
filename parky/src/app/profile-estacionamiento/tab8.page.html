@@ -6,44 +6,31 @@
     <div class="miCuenta-contenedor">
 
       <ion-toolbar>
-        <ion-title class="ion-text-start">Estacionamiento</ion-title>
+        <ion-title class="ion-text-start">Datos Personales</ion-title>
       </ion-toolbar>
 
       <ion-item>
-        <ion-label position="stacked">Nombre del estacionamiento</ion-label>
-        <ion-input type="text" placeholder="Estacionamiento" formControlName="estacionamiento"></ion-input>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" placeholder="Nombre" formControlName="nombre"></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-label position="stacked">Dirección</ion-label>
-        <ion-input type="text" placeholder="Dirección" formControlName="direccion"></ion-input>
+        <ion-label position="stacked">Apellido</ion-label>
+        <ion-input type="text" placeholder="Apellido" formControlName="apellido"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-label position="stacked">Teléfono</ion-label>
-        <ion-input type="text" placeholder="Capacidad" formControlName="telefono"></ion-input>
+        <ion-label position="stacked">Correo Electronico</ion-label>
+        <ion-input type="text" placeholder="Correo Electronico" formControlName="correo"></ion-input>
       </ion-item>
   
       <ion-item>
-        <ion-label position="stacked">Horario</ion-label>
-        <ion-input type="text" placeholder="Horario" formControlName="horario"></ion-input>
+        <ion-label position="stacked">Telefono</ion-label>
+        <ion-input type="text" placeholder="Telefono" formControlName="telefono"></ion-input>
       </ion-item>
-  
-      <ion-item>
-        <ion-label position="stacked">Tarifa</ion-label>
-        <ion-input type="text" placeholder="Tarifa" formControlName="tarifa"></ion-input>
-      </ion-item>
-  
-      <ion-item>
-        <ion-label position="stacked">Lugares Disponibles</ion-label>
-        <ion-input type="text" placeholder="Capacidad" formControlName="lugaresdisponibles"></ion-input>
-      </ion-item>
-      
-      
 
     </div>
 
     <ion-button fill="clear" type="submit" class="btn-guardar">Guardar Cambios</ion-button>
 
-    <ion-button fill="clear" class="btn-cerrar" type="button" (click)="logOut()">Cerrar Sesión</ion-button>
 </form>

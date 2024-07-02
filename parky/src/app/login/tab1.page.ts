@@ -21,8 +21,6 @@ export class Tab1Page {
 
   async loginUser() {
     this.auth.logIn(this.email, this.password).then((userCredential) => {
-    
-      this.auth.setTabNuevo(true); // Establecer tabnuevo en true
       this.router.navigate(['/tabs/tab10'])
     
     }).catch((error: any) => {

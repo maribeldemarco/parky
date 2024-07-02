@@ -1,5 +1,11 @@
 <ion-content [fullscreen]="true">
-
+  <ion-toolbar>
+    <ion-buttons slot="end" size="large">
+      <ion-button (click)="logout()"> 
+        <ion-icon name="log-out-outline" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
     <!-- <div class="ion-page" id="main-content">
         <ion-toolbar>
           <ion-buttons slot="end">
@@ -78,8 +84,3 @@
     </ion-tab-bar>
   
   </ion-tabs>
-
-
-</ion-content>
-
-

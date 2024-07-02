@@ -18,21 +18,31 @@
 
       <!-- DESPLEGABLE -->
       <div slot="content">
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Cupo Total: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Disponibilidad: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por hora: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por día - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa mensual: - </ion-label>
-        </ion-item>
+        <form [formGroup]="datosAutos" (ngSubmit)="onSubmit(datosAutos, 'Autos')" class="formulario">
+          <div>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Cupo Total: </ion-label>
+              <ion-input type="text" placeholder="Cupo" formControlName="cupo"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Disponibilidad: </ion-label>
+              <ion-input type="text" placeholder="Disponible" formControlName="disponible"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por hora: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por hora" formControlName="tarifaXHora"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por día: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por dia" formControlName="tarifaXDia"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa mensual: </ion-label>
+              <ion-input type="text" placeholder="Tarifa mensual" formControlName="tarifaXMes"></ion-input>
+            </ion-item>
+          </div>
+          <ion-button fill="clear" type="submit" class="btn-guardar">Guardar</ion-button>
+        </form>
       </div>
     </ion-accordion>
 
@@ -44,21 +54,31 @@
       </ion-item>
       <!-- DESPLEGABLE -->
       <div slot="content">
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Cupo Total: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Disponibilidad: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por hora: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por día - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa mensual: - </ion-label>
-        </ion-item>
+        <form [formGroup]="datosMotos" (ngSubmit)="onSubmit(datosMotos, 'Motos')" class="formulario">
+          <div>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Cupo Total: </ion-label>
+              <ion-input type="text" placeholder="Cupo" formControlName="cupo"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Disponibilidad: </ion-label>
+              <ion-input type="text" placeholder="Disponible" formControlName="disponible"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por hora: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por hora" formControlName="tarifaXHora"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por día: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por dia" formControlName="tarifaXDia"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa mensual: </ion-label>
+              <ion-input type="text" placeholder="Tarifa mensual" formControlName="tarifaXMes"></ion-input>
+            </ion-item>
+          </div>
+          <ion-button fill="clear" type="submit" class="btn-guardar">Guardar</ion-button>
+        </form>
       </div>
     </ion-accordion>
 
@@ -71,21 +91,31 @@
       
       <!-- DESPLEGABLE -->
       <div slot="content">
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Cupo Total: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Disponibilidad: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por hora: - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa por día - </ion-label>
-        </ion-item>
-        <ion-item class="fondo-transporte">
-          <ion-label class="margin">Tarifa mensual: - </ion-label>
-        </ion-item>
+        <form [formGroup]="datosBicis" (ngSubmit)="onSubmit(datosBicis, 'Bicis')" class="formulario">
+          <div>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Cupo Total: </ion-label>
+              <ion-input type="text" placeholder="Cupo" formControlName="cupo"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Disponibilidad: </ion-label>
+              <ion-input type="text" placeholder="Disponible" formControlName="disponible"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por hora: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por hora" formControlName="tarifaXHora"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa por día: </ion-label>
+              <ion-input type="text" placeholder="Tarifa por dia" formControlName="tarifaXDia"></ion-input>
+            </ion-item>
+            <ion-item class="fondo-transporte">
+              <ion-label class="margin">Tarifa mensual: </ion-label>
+              <ion-input type="text" placeholder="Tarifa mensual" formControlName="tarifaXMes"></ion-input>
+            </ion-item>
+          </div>
+          <ion-button fill="clear" type="submit" class="btn-guardar">Guardar</ion-button>
+        </form>
       </div>      
     </ion-accordion>
   </ion-accordion-group>    
@@ -94,15 +124,27 @@
    <div class="estacionamiento">
     <img src="assets/img-estacion.jpg" class="img-estacionamiento" alt="">
     <div class="info-estacionamiento">
-      <ion-item class="fondo-transporte">
-        <ion-label class="margin">Estacionamiento: - </ion-label>
-      </ion-item>
-      <ion-item class="fondo-transporte">
-        <ion-label class="margin">Dirección: - </ion-label>
-      </ion-item>
-      <ion-item class="fondo-transporte">
-        <ion-label class="margin">Horario: - </ion-label>
-      </ion-item>
+      <form [formGroup]="datosEstacionamiento" (ngSubmit)="onSubmit(datosEstacionamiento, 'Estacionamientos')" class="formulario">
+        <div>
+          <ion-item class="fondo-transporte">
+            <ion-label class="margin">Nombre: </ion-label>
+            <ion-input type="text" formControlName="nombre"></ion-input>
+          </ion-item>
+          <ion-item class="fondo-transporte">
+            <ion-label class="margin">Dirección: </ion-label>
+            <ion-input type="text" formControlName="direccion"></ion-input>
+          </ion-item>
+          <ion-item class="fondo-transporte">
+            <ion-label class="margin">Horario: </ion-label>
+            <ion-input type="text" formControlName="horario"></ion-input>
+          </ion-item>
+          <ion-item class="fondo-transporte">
+            <ion-label class="margin">Telefono: </ion-label>
+            <ion-input type="text" formControlName="telefono"></ion-input>
+          </ion-item>
+        </div>
+        <ion-button fill="clear" type="submit" class="btn-guardar">Guardar</ion-button>
+      </form>
     </div>
 
 

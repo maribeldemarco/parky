@@ -25,6 +25,7 @@ ion-content {
     width: 150px;
     height: 150px;
     padding: 15px;
+    padding-right: 0;
 
 }
 
@@ -58,11 +59,17 @@ ion-label {
 
 .margin {
     margin: 0%;
+    width: fit-content;
+    text-wrap: nowrap;
 }
 //img transporte
 
 .img-transp{
     border-radius: 15px ;
 
+}
+
+ion-input {
+    margin-left: 15px;
 }
 

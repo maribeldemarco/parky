@@ -17,8 +17,10 @@ export class TabsPage {
 
   logout() {
     this.auth.logOut()
-    this.router.navigate(['/tabs/tab1'])
+    this.router.navigate(['login'])
   }
+
+
 
   miCuenta() {
     this.router.navigate(['/tabs/tab5']);

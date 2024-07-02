@@ -1,46 +1,38 @@
-<!-- MI CUENTA -->
 <div class="contenedor">
-  <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
+  <img src="assets/perfil.png" class="img-profile" alt="Logo">
   
-  <div class="miCuenta-contenedor">
-    <ion-toolbar>
-      <ion-title class="ion-text-start">Estacionamiento</ion-title>
-    </ion-toolbar>
-    
-    <ion-item>
-      <ion-label position="stacked">Nombre del estacionamiento</ion-label>
-      <ion-input type="text" placeholder="Estacionamiento"></ion-input>
-    </ion-item>
+  
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formulario">
+    <div class="miCuenta-contenedor">
 
-    <ion-item>
-      <ion-label position="stacked">Dirección</ion-label>
-      <ion-input type="text" placeholder="Dirección"></ion-input>
-    </ion-item>
+      <ion-toolbar>
+        <ion-title class="ion-text-start">Estacionamiento</ion-title>
+      </ion-toolbar>
+      <ion-item>
+        <ion-label position="stacked">Nombre</ion-label>
+        <ion-input type="text" placeholder="Nombre" formControlName="nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Direccion</ion-label>
+        <ion-input type="text" placeholder="Direccion" formControlName="direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked">Horario</ion-label>
+        <ion-input type="text" placeholder="Horario" formControlName="horario"></ion-input>
+      </ion-item>  
+      <ion-item>
+        <ion-label position="stacked">Telefono</ion-label>
+        <ion-input type="text" placeholder="Telefono" formControlName="telefono"></ion-input>
+      </ion-item>     
+      
 
-    <ion-item>
-      <ion-label position="stacked">Horario</ion-label>
-      <ion-input type="text" placeholder="Horario"></ion-input>
-    </ion-item>
+    </div>
 
-    <ion-item>
-      <ion-label position="stacked">Tarifa</ion-label>
-      <ion-input type="text" placeholder="Tarifa"></ion-input>
-    </ion-item>
+  <ion-button fill="clear" class="btn-guardar" (click)="atras()" >Anterior</ion-button>
+  <ion-button fill="clear" type="submit" class="btn-guardar">Guardar</ion-button>
 
-    <ion-item>
-      <ion-label position="stacked">Capacidad</ion-label>
-      <ion-input type="text" placeholder="Capacidad"></ion-input>
-    </ion-item>
-    
-    <ion-item>
-      <ion-label position="stacked">Disponibilidad</ion-label>
-      <ion-input type="text" placeholder="Disponibilidad"></ion-input>
-    </ion-item>
-  </div>
 
-  <ion-button fill="clear" (click)="terminarRegistro()" class="btn-guardar">Guardar</ion-button>
-</div>
-
+</form>
 
 
 

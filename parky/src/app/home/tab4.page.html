@@ -1,5 +1,4 @@
 <ion-content>
-  <br /><br />
 
   <!-- FLECHA ATRAS -->
   <ion-toolbar>
@@ -9,6 +8,8 @@
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
+
+  <!-- BUSCADOR -->
   <div class="search-container">
     <ion-searchbar
       showCancelButton="focus"
@@ -23,6 +24,8 @@
       <ion-button class="ion-justify-content-center" fill="clear" (click)="borrar()"
       >Borrar todos los estacionamientos</ion-button>
   </div>
+
+
   <ion-list *ngIf="obtenerestacionamiento && !buscardatos">
     <ion-item *ngFor="let documento of documentos">
       <ion-label>
@@ -49,3 +52,6 @@
     </ion-item>
   </ion-list>
 </ion-content>
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+<script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>

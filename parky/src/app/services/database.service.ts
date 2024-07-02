@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { addDoc, collection, doc, getDoc, getFirestore, setDoc } from 'firebase/firestore';
+import { addDoc, collection, doc, getDoc, getFirestore, setDoc, updateDoc } from 'firebase/firestore';
 import { FormGroup } from '@angular/forms';
 import { initializeApp } from 'firebase/app';
 import { environment } from 'src/environments/environment';
@@ -16,23 +16,9 @@ export class DatabaseService {
 
   constructor(private auth: AuthenticationService, private toastController: ToastController) { }
 
-    async loadEstacionamientoProfile(formLogin: FormGroup<any>, uid: string) {
+    async load(formLogin: FormGroup<any>, uid: string, carpeta: string) {
       try {
-        const userDocRef = doc(db, `Estacionamiento/${uid}`);
-        const userDoc = await getDoc(userDocRef);
-        if (userDoc.exists()) {
-          formLogin.patchValue(userDoc.data() as any);
-        } else {
-          console.error('Document does not exist');
-        }
-      } catch (error) {
-        console.error('Error ', error);
-      }
-    }
-
-    async loadUserProfile(formLogin: FormGroup<any>, uid: string) {
-      try {
-        const userDocRef = doc(db, `Propietarios/${uid}`);
+        const userDocRef = doc(db, `${carpeta}/${uid}`);
         const userDoc = await getDoc(userDocRef);
         if (userDoc.exists()) {
           formLogin.patchValue(userDoc.data() as any);
@@ -44,38 +30,21 @@ export class DatabaseService {
       }
     }
   
-    async onSubmitEstacionamiento(formLogin: FormGroup<any>, uid: string) {
+    async onSubmit(formLogin: FormGroup<any>, uid: string, carpeta: string) {
       if (formLogin.valid) {
         try {
-          const userDocRef = doc(db, `Estacionamientos/${uid}`);
+          const userDocRef = doc(db, `${carpeta}/${uid}`);
           await setDoc(userDocRef, formLogin.value);
           
           this.presentToast();
           console.log('Perfil actualizado correctamente');
-          this.loadEstacionamientoProfile(formLogin, uid);
+          this.load(formLogin, uid, carpeta);
 
         } catch (error) {
           console.error('Error :', error);
         }
       }
     }
-
-    async onSubmitUser(formLogin: FormGroup<any>, uid: string) {
-      if (formLogin.valid) {
-        try {
-          const userDocRef = doc(db, `Propietarios/${uid}`);
-          await setDoc(userDocRef, formLogin.value);
-          
-          this.presentToast();
-          console.log('Perfil actualizado correctamente');
-          this.loadEstacionamientoProfile(formLogin, uid);
-
-        } catch (error) {
-          console.error('Error :', error);
-        }
-      }
-    }
-
 
     async presentToast() {
       const toast = await this.toastController.create({
