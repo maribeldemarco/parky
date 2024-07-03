@@ -65,7 +65,7 @@ export class Tab4Page implements OnInit {
       const searchTerm = event.target.value.toLowerCase();
       this.filteredDocumentos = this.documentos.filter((documento) => {
         return (
-          documento.estacionamiento.toLowerCase().includes(searchTerm) ||
+          documento.nombre.toLowerCase().includes(searchTerm) ||
           documento.direccion.toLowerCase().includes(searchTerm)
         );
       });
