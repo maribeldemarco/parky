@@ -41,7 +41,7 @@
   <ion-list *ngIf="buscardatos">
     <ion-item *ngFor="let documento of filteredDocumentos">
       <ion-label>
-        <h2>{{ documento.estacionamiento }}</h2>
+        <h2>{{ documento.nombre }}</h2>
         <p>Dirección: {{ documento.direccion }}</p>
         <p>Teléfono: {{ documento.telefono }}</p>
         <p>Horario: {{ documento.horario }}</p>

@@ -63,12 +63,16 @@ export class Tab4Page implements OnInit {
     } else {
       this.buscardatos = true;
       const searchTerm = event.target.value.toLowerCase();
+      console.log(searchTerm)
+      
       this.filteredDocumentos = this.documentos.filter((documento) => {
+        console.log(documento)
         return (
           documento.nombre.toLowerCase().includes(searchTerm) ||
           documento.direccion.toLowerCase().includes(searchTerm)
         );
       });
+      console.log(this.filteredDocumentos)
     }
   }
 
