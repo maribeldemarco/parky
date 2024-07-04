@@ -1,11 +1,12 @@
 
-<div class="contenedor">
+<ion-content class="contenedor">
   <img src="assets/icon/logo.svg" alt="Logo" class="logoparky">
   
-  <div class="miCuenta-contenedor">
+  <div class="contenedor-principal">
     <ion-toolbar>
       <ion-title class="ion-text-start">Soy dueño/a de un estacionamiento</ion-title>
     </ion-toolbar>
+    
       <form [formGroup]="formLogin" (ngSubmit)="onSubmit()" class="formulario">
         <div class="miCuenta-contenedor">
     
@@ -35,10 +36,11 @@
     
         </div>
     
-        <ion-button fill="clear" type="submit" class="btn-guardar">Continuar</ion-button>
+        <ion-button fill="clear" type="submit" class="btn-siguiente">Continuar</ion-button>
     
     </form>
-
+  </div>
+</ion-content>
 
 
 
